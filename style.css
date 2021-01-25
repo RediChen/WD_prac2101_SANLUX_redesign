@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {
@@ -9,11 +15,36 @@ nav {
   display: grid;
   -ms-grid-columns: 15% auto 15%;
       grid-template-columns: 15% auto 15%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: cornflowerblue;
 }
 
-nav #link-wrap a {
-  text-decoration: none;
+nav #nav-link-wrap {
+  height: 72px;
+  border: 1px solid #000;
+}
+
+nav #nav-link-wrap .nav-a {
+  display: inline-block;
+  height: 50px;
+  margin: 0 7px 15px;
   color: AliceBlue;
+}
+
+nav #nav-link-wrap .nav-a:hover {
+  background-color: SteelBlue;
+}
+
+nav #nav-soc a {
+  height: 25px;
+  margin: auto 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav #nav-soc a:hover {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
