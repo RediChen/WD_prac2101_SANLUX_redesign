@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% auto 15%;
+      grid-template-columns: 15% auto 15%;
+  background-color: cornflowerblue;
+}
+
+nav #link-wrap a {
+  text-decoration: none;
+  color: AliceBlue;
+}
+/*# sourceMappingURL=style.css.map */
