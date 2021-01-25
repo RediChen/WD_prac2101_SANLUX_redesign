@@ -21,20 +21,19 @@ nav {
   background-color: cornflowerblue;
 }
 
-nav #nav-link-wrap {
-  height: 72px;
-  border: 1px solid #000;
-}
-
 nav #nav-link-wrap .nav-a {
   display: inline-block;
-  height: 50px;
+  position: relative;
+  bottom: 20px;
   margin: 0 7px 15px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  line-height: 100%;
   color: AliceBlue;
 }
 
 nav #nav-link-wrap .nav-a:hover {
-  background-color: SteelBlue;
+  text-shadow: 0 0 20px DarkBlue;
 }
 
 nav #nav-soc a {
@@ -46,5 +45,88 @@ nav #nav-soc a {
 
 nav #nav-soc a:hover {
   background-color: #fff;
+}
+
+#NEWS .banner .slick-arrow {
+  z-index: 3;
+}
+
+#NEWS .banner .slick-arrow::before {
+  color: cornflowerblue;
+  font-size: 40px;
+}
+
+#NEWS .banner .slick-prev {
+  left: 10px;
+}
+
+#NEWS .banner .slick-next {
+  right: 10px;
+}
+
+#NEWS .banner #banner1 {
+  background-image: url(./img/banner1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner1:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner2 {
+  background-image: url(./img/banner2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner2:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner3 {
+  background-image: url(./img/banner3.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner3:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner4 {
+  background-image: url(./img/banner4.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner4:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner5 {
+  background-image: url(./img/banner5.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner5:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner6 {
+  background-image: url(./img/banner6.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner6:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
