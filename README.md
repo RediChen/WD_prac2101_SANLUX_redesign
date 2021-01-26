@@ -1,2 +1,2 @@
-# WD_prac2101_SANLUX
+# WD_prac2101_SANLUX_redesign
 前端網頁設計課的小專案：重製三洋官網
