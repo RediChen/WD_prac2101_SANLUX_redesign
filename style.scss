@@ -3,7 +3,7 @@
 $mainColor: cornflowerblue;
 $textColor: AliceBlue;
 $font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
-$font-en: "Montserrat", sans-serif; //italic ; 300~900
+$font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
 
 * {
     margin: 0;
@@ -46,6 +46,7 @@ nav {
         }
     }
 }
+// 導覽列 END ====================================================
 // 輪播圖 ========================================================
 #NEWS {
     .banner {
@@ -64,12 +65,13 @@ nav {
         }
         @for $i from 1 through 6 {
             #banner#{$i} {
-                background-image: url(./img/banner#{$i}.jpg);
+                background-image: url(./img/banner#{$i}.jpg);//for 迴圈也可以使用在檔名的數字
                 background-size: contain;
                 background-repeat: no-repeat;
                 height: 37vh;
                 &:focus {outline: none;} //取消slick設定的黑框
             }
-        } //for 迴圈也可以使用在檔名的數字
+        }
     }
 }
+// 輪播圖 END ====================================================
