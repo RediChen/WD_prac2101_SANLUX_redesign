@@ -91,7 +91,7 @@
         <div id="news-card-wrap">
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1>公告</h1>
+                <h1 class="title-big">公告</h1>
                 <p>這是公告的內容</p>
                 <button></button>
             </div>
@@ -129,19 +129,28 @@
     </section>
     <!-- 最新消息 END ======================================================= -->
     <!-- 報修窗口 =========================================================== -->
-    <form ><!--在此通常會使用屬性 action="" 並且傳給後端(.php)-->
+    <form action="POST"><!--在此通常會使用屬性 action="" 並且傳給後端(.php)-->
         <label for="user-name">使用者姓名：</label>
-        <input type="text" name="user-name">
-        <label for="user-phone">聯絡用手機：</label>
-        <input type="text" name="user-phone">
+        <input type="text" name="user-name" placeholder="請輸入您的姓名">
+        <label for="phone">聯絡用手機：</label>
+        <input type="text" name="user-phone" placeholder="請輸入您的手機號碼">
+        <br>
         <label for="address">地址：</label>
-        <input type="text" name="address">
+        <input type="text" name="address" placeholder="請輸入使用電器的地址">
         <label for="model-num">機型型號：</label>
-        <input type="text" name="model-num">
-        <label for="malfunction">故障情形：</label>
-        <textarea type="text" name="malfunction">
+        <input type="text" name="model-num" placeholder="請輸入故障機型的型號">
+        <br>
+        <label for="malfunction" style="text-align: center;">故障情形：</label>
+        <br>
+        <textarea type="text" name="malfunction" placeholder="請詳細描述故障的情形"></textarea>
+        <input type="submit" value="送出">
     </form>
     <!-- 報修窗口 END ======================================================= -->
+    <!-- 頁尾 =============================================================== -->
+    <footer>
+        
+    </footer>
+    <!-- 頁尾 END =========================================================== -->
 
     <!-- 連線jQuery庫 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

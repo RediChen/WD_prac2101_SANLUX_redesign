@@ -4,17 +4,22 @@ $mainColor: cornflowerblue;
 $textColor: AliceBlue;
 $font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
 $font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
-$text-shadow: 1px 1px 5px #666 ;
-$box-shadow: 1px 1px 5px #666 ;
+$text-shadow: 1px 1px 5px #666;
+$box-shadow: 1px 1px 5px #666;
 // 通用樣式區
 * {
     margin: 0;
     padding: 0;
 }
-a { text-decoration: none;}
+a {
+    text-decoration: none;
+}
 .hr-title {
     margin: 15px 20%;
     border-color: #000;
+}
+.title-big {
+    text-align: center;
 }
 //TODO add title-big
 // 導覽列 ========================================================
@@ -54,10 +59,10 @@ nav {
 // 導覽列 END ====================================================
 // 輪播圖 ========================================================
 #NEWS {
-    .banner {
+    #banner {
         display: block;
-        margin: 0 auto;
-        box-shadow: $box-shadow;
+        // margin: 0 auto;
+        // box-shadow: $box-shadow;
         @for $i from 1 through 6 {
             #banner#{$i} {
                 background-image: url(./img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
@@ -95,7 +100,6 @@ nav {
     h1 {
         text-align: center;
     }
-    
 
     #info-card-wrap {
         display: grid;
@@ -137,15 +141,41 @@ nav {
     }
 }
 // 服務項目 END ==================================================
+// 最新消息 ======================================================
+#news {
+    text-align: center;
+}
+// 最新消息 END ==================================================
 // 報修窗口 ======================================================
 form {
+    margin: 100px;
+    // border: 2px solid dimgray;
     input {
-        width: 45%;
+        width: 30%;
+        margin: 10px 0;
         padding: 10px;
+        &::placeholder {
+            color: #777777;
+            font-size: 10px;
+        }
+        &[type="phone"],
+        &[type="model-num"] {
+            float: right;
+        }
+        &[type=submit] {
+            background-color: $textColor;
+            border-color: $mainColor;
+            color: $mainColor ;
+        }
     }
     textarea {
         width: 100%;
         height: 100px;
+        &::placeholder {
+            color: #777777;
+            font-size: 10px;
+            padding: 5px 0 0 15px;
+        }
     }
 }
 // 報修窗口 END ==================================================
