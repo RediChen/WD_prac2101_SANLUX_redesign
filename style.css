@@ -9,6 +9,11 @@ a {
   text-decoration: none;
 }
 
+.hr-title {
+  margin: 15px 20%;
+  border-color: #000;
+}
+
 nav {
   padding: 20px 0;
   display: -ms-grid;
@@ -47,6 +52,79 @@ nav #nav-soc a:hover {
   background-color: #fff;
 }
 
+#NEWS .banner {
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 5px #666;
+          box-shadow: 1px 1px 5px #666;
+}
+
+#NEWS .banner #banner1 {
+  background-image: url(./img/banner1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner1:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner2 {
+  background-image: url(./img/banner2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner2:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner3 {
+  background-image: url(./img/banner3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner3:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner4 {
+  background-image: url(./img/banner4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner4:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner5 {
+  background-image: url(./img/banner5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner5:focus {
+  outline: none;
+}
+
+#NEWS .banner #banner6 {
+  background-image: url(./img/banner6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 37vh;
+}
+
+#NEWS .banner #banner6:focus {
+  outline: none;
+}
+
 #NEWS .banner .slick-arrow {
   z-index: 3;
 }
@@ -64,69 +142,70 @@ nav #nav-soc a:hover {
   right: 10px;
 }
 
-#NEWS .banner #banner1 {
-  background-image: url(./img/banner1.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 37vh;
+#info {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
-#NEWS .banner #banner1:focus {
-  outline: none;
+#info h1 {
+  text-align: center;
 }
 
-#NEWS .banner #banner2 {
-  background-image: url(./img/banner2.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 37vh;
+#info #info-card-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
-#NEWS .banner #banner2:focus {
-  outline: none;
+#info #info-card-wrap .info-card {
+  width: 300px;
+  height: 200px;
+  background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 5px #666;
+          box-shadow: 1px 1px 5px #666;
+  color: blanchedalmond;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#NEWS .banner #banner3 {
-  background-image: url(./img/banner3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 37vh;
+#info #info-card-wrap .info-card h2 {
+  font-family: "Noto Sans TC", sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#NEWS .banner #banner3:focus {
-  outline: none;
+#info #info-card-wrap .info-card h3 {
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#NEWS .banner #banner4 {
-  background-image: url(./img/banner4.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 37vh;
+#info #info-card-wrap .info-card:hover {
+  background-image: url(https://fakeimg.pl/300x200/abcdef/696969/);
 }
 
-#NEWS .banner #banner4:focus {
-  outline: none;
+#info #info-card-wrap .info-card:hover h2 {
+  font-size: 40px;
 }
 
-#NEWS .banner #banner5 {
-  background-image: url(./img/banner5.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 37vh;
+#info #info-card-wrap .info-card:hover h3 {
+  font-size: 24px;
 }
 
-#NEWS .banner #banner5:focus {
-  outline: none;
+#info #info-card-wrap .info-card:hover::after {
+  content: "IDK";
 }
 
-#NEWS .banner #banner6 {
-  background-image: url(./img/banner6.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 37vh;
+form input {
+  width: 45%;
+  padding: 10px;
 }
 
-#NEWS .banner #banner6:focus {
-  outline: none;
+form textarea {
+  width: 100%;
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */

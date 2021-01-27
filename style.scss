@@ -4,14 +4,19 @@ $mainColor: cornflowerblue;
 $textColor: AliceBlue;
 $font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
 $font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
-
+$text-shadow: 1px 1px 5px #666 ;
+$box-shadow: 1px 1px 5px #666 ;
+// 通用樣式區
 * {
     margin: 0;
     padding: 0;
 }
-a {
-    text-decoration: none;
+a { text-decoration: none;}
+.hr-title {
+    margin: 15px 20%;
+    border-color: #000;
 }
+//TODO add title-big
 // 導覽列 ========================================================
 nav {
     padding: 20px 0;
@@ -50,28 +55,97 @@ nav {
 // 輪播圖 ========================================================
 #NEWS {
     .banner {
+        display: block;
+        margin: 0 auto;
+        box-shadow: $box-shadow;
+        @for $i from 1 through 6 {
+            #banner#{$i} {
+                background-image: url(./img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 37vh;
+                &:focus {
+                    outline: none;
+                } //取消slick設定的黑框
+            }
+        }
+        //Slick adjust
         .slick-arrow {
             z-index: 3;
         }
         .slick-arrow::before {
-            color : $mainColor ;
+            color: $mainColor;
             font-size: 40px;
         }
         .slick-prev {
             left: 10px;
         }
         .slick-next {
-            right : 10px ;
+            right: 10px;
         }
-        @for $i from 1 through 6 {
-            #banner#{$i} {
-                background-image: url(./img/banner#{$i}.jpg);//for 迴圈也可以使用在檔名的數字
-                background-size: contain;
-                background-repeat: no-repeat;
-                height: 37vh;
-                &:focus {outline: none;} //取消slick設定的黑框
+        //Slick adjust END
+    }
+}
+// 輪播圖 END ====================================================
+// 服務項目 ======================================================
+#info {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+    }
+    
+
+    #info-card-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+        .info-card {
+            width: 300px;
+            height: 200px;
+            background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
+            text-align: center;
+            box-shadow: $box-shadow;
+            color: blanchedalmond;
+            transition: 0.5s;
+
+            h2 {
+                font-family: $font-zh;
+                transition: 0.5s;
+            }
+            h3 {
+                font-family: $font-en;
+                transition: 0.5s;
+            }
+
+            &:hover {
+                background-image: url(https://fakeimg.pl/300x200/abcdef/696969/);
+
+                h2 {
+                    font-size: 40px;
+                }
+                h3 {
+                    font-size: 24px;
+                }
+                &::after {
+                    content: "IDK";
+                }
             }
         }
     }
 }
-// 輪播圖 END ====================================================
+// 服務項目 END ==================================================
+// 報修窗口 ======================================================
+form {
+    input {
+        width: 45%;
+        padding: 10px;
+    }
+    textarea {
+        width: 100%;
+        height: 100px;
+    }
+}
+// 報修窗口 END ==================================================
