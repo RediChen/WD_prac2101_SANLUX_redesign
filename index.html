@@ -91,64 +91,72 @@
         <div id="news-card-wrap">
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1 class="title-big">公告</h1>
+                <h1 class="title-medium">公告</h1>
                 <p>這是公告的內容</p>
                 <button></button>
             </div>
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1>公告</h1>
+                <h1 class="title-medium">公告</h1>
                 <p>這是公告的內容</p>
                 <button></button>
             </div>
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1>公告</h1>
+                <h1 class="title-medium">公告</h1>
                 <p>這是公告的內容</p>
                 <button></button>
             </div>
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1>公告</h1>
+                <h1 class="title-medium">公告</h1>
                 <p>這是公告的內容</p>
                 <button></button>
             </div>
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1>公告</h1>
+                <h1 class="title-medium">公告</h1>
                 <p>這是公告的內容</p>
                 <button></button>
             </div>
             <div class="news-card">
                 <img src="https://fakeimg.pl/300x200/696969/abcdef/" alt="">
-                <h1>公告</h1>
+                <h1 class="title-medium">公告</h1>
                 <p>這是公告的內容</p>
-                <button></button>
+                <button>詳細</button>
             </div>
         </div>
     </section>
     <!-- 最新消息 END ======================================================= -->
     <!-- 報修窗口 =========================================================== -->
-    <form action="POST"><!--在此通常會使用屬性 action="" 並且傳給後端(.php)-->
-        <label for="user-name">使用者姓名：</label>
-        <input type="text" name="user-name" placeholder="請輸入您的姓名">
-        <label for="phone">聯絡用手機：</label>
-        <input type="text" name="user-phone" placeholder="請輸入您的手機號碼">
-        <br>
-        <label for="address">地址：</label>
-        <input type="text" name="address" placeholder="請輸入使用電器的地址">
-        <label for="model-num">機型型號：</label>
-        <input type="text" name="model-num" placeholder="請輸入故障機型的型號">
-        <br>
-        <label for="malfunction" style="text-align: center;">故障情形：</label>
-        <br>
-        <textarea type="text" name="malfunction" placeholder="請詳細描述故障的情形"></textarea>
-        <input type="submit" value="送出">
+    <form action="POST">
+        <!--在此通常會使用屬性 action="" 並且傳給後端(.php)-->
+        <div>
+            <label for="user-name">使用者姓名：</label>
+            <input type="text" name="user-name" placeholder="請輸入您的姓名" />
+        </div>
+        <div>
+            <label for="phone">聯絡用手機：</label>
+            <input type="text" name="user-phone" placeholder="請輸入您的手機號碼">
+        </div>
+        <div>
+            <label for="address">地址：</label>
+            <input type="text" name="address" placeholder="請輸入該電器所在的地址">
+        </div>
+        <div>
+            <label for="model-num">機型型號：</label>
+            <input type="text" name="model-num" placeholder="請輸入故障機型的型號">
+        </div>
+        <div>
+            <label for="malfunction" style="text-align: center;">故障情形：</label>
+            <textarea type="text" name="malfunction" placeholder="請詳細描述故障的情形"></textarea>
+        </div>
+        <input type="submit" value="送出"> <!-- submit按鍵的按鈕文字用value賦值 -->
     </form>
     <!-- 報修窗口 END ======================================================= -->
     <!-- 頁尾 =============================================================== -->
     <footer>
-        
+
     </footer>
     <!-- 頁尾 END =========================================================== -->
 

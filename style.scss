@@ -6,6 +6,10 @@ $font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
 $font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
 $text-shadow: 1px 1px 5px #666;
 $box-shadow: 1px 1px 5px #666;
+$desktop : 1025px ;//width lower bound
+$tablet : 1024px ;//width upper bound
+$desktop : 767px ;//width upper bound
+
 // 通用樣式區
 * {
     margin: 0;
@@ -20,6 +24,15 @@ a {
 }
 .title-big {
     text-align: center;
+    font-family: $font-zh ;
+    font-weight: 700;
+    font-size: 36px;
+}
+.title-medium {
+    text-align: center;
+    font-family: $font-zh ;
+    font-weight: 500;
+    font-size: 24px;
 }
 //TODO add title-big
 // 導覽列 ========================================================
@@ -97,10 +110,6 @@ nav {
     max-width: 1080px;
     margin: 0 auto;
 
-    h1 {
-        text-align: center;
-    }
-
     #info-card-wrap {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -124,6 +133,9 @@ nav {
                 transition: 0.5s;
             }
 
+            &:focus {
+                outline: none;
+            } //取消slick設定的黑框
             &:hover {
                 background-image: url(https://fakeimg.pl/300x200/abcdef/696969/);
 
@@ -146,21 +158,22 @@ nav {
     text-align: center;
 }
 // 最新消息 END ==================================================
-// 報修窗口 ======================================================
+// 報修表單 ======================================================
 form {
-    margin: 100px;
-    // border: 2px solid dimgray;
-    input {
-        width: 30%;
+    margin: 100px 50px;
+    div {
+        // float : left ;
         margin: 10px 0;
         padding: 10px;
+    }
+    input {
+        width: 100%;
+        
         &::placeholder {
-            color: #777777;
-            font-size: 10px;
-        }
-        &[type="phone"],
-        &[type="model-num"] {
-            float: right;
+            color: #666666;
+            font-family: $font-zh ;
+            font-weight: 300;
+            font-size: 14px;
         }
         &[type=submit] {
             background-color: $textColor;
@@ -173,9 +186,10 @@ form {
         height: 100px;
         &::placeholder {
             color: #777777;
-            font-size: 10px;
+            font-family: $font-zh ;
+            font-size: 14px;
             padding: 5px 0 0 15px;
         }
     }
 }
-// 報修窗口 END ==================================================
+// 報修表單 END ==================================================
