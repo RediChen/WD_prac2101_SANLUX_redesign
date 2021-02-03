@@ -41,15 +41,15 @@ nav {
 }
 
 nav #nav-link-wrap {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
+  list-style: none;
 }
 
 nav #nav-link-wrap .nav-a {
@@ -83,6 +83,8 @@ nav #nav-soc a:hover {
 
 #NEWS #banner {
   display: block;
+  -webkit-box-shadow: 1px 1px 5px #666;
+          box-shadow: 1px 1px 5px #666;
 }
 
 #NEWS #banner #banner1 {
@@ -92,6 +94,7 @@ nav #nav-soc a:hover {
   width: 100vw;
   max-width: 1800px;
   height: calc(100vw/3);
+  max-height: 600px;
 }
 
 #NEWS #banner #banner1:focus {
@@ -105,6 +108,7 @@ nav #nav-soc a:hover {
   width: 100vw;
   max-width: 1800px;
   height: calc(100vw/3);
+  max-height: 600px;
 }
 
 #NEWS #banner #banner2:focus {
@@ -118,6 +122,7 @@ nav #nav-soc a:hover {
   width: 100vw;
   max-width: 1800px;
   height: calc(100vw/3);
+  max-height: 600px;
 }
 
 #NEWS #banner #banner3:focus {
@@ -131,6 +136,7 @@ nav #nav-soc a:hover {
   width: 100vw;
   max-width: 1800px;
   height: calc(100vw/3);
+  max-height: 600px;
 }
 
 #NEWS #banner #banner4:focus {
@@ -144,6 +150,7 @@ nav #nav-soc a:hover {
   width: 100vw;
   max-width: 1800px;
   height: calc(100vw/3);
+  max-height: 600px;
 }
 
 #NEWS #banner #banner5:focus {
@@ -157,6 +164,7 @@ nav #nav-soc a:hover {
   width: 100vw;
   max-width: 1800px;
   height: calc(100vw/3);
+  max-height: 600px;
 }
 
 #NEWS #banner #banner6:focus {
@@ -217,13 +225,13 @@ nav #nav-soc a:hover {
 }
 
 #info #info-card-wrap .info-card {
-  margin: 0 auto;
   width: 300px;
   height: 200px;
+  margin: 0 auto;
   background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
-  text-align: center;
   -webkit-box-shadow: 1px 1px 5px #666;
           box-shadow: 1px 1px 5px #666;
+  text-align: center;
   color: blanchedalmond;
   -webkit-transition: 0.5s;
   transition: 0.5s;

@@ -15,9 +15,7 @@ $mobile : 767px ;//width upper bound
     margin: 0;
     padding: 0;
 }
-a {
-    text-decoration: none;
-}
+a {text-decoration: none;}
 .hr-title {
     margin: 15px 20%;
     border-color: #000;
@@ -51,7 +49,6 @@ nav {
         align-items: center;
         list-style: none;
         .nav-a {
-            // position: relative;
             bottom: 20px;
             margin: 0 7px 15px;
             font-family: $font-zh;
@@ -83,8 +80,7 @@ nav {
 #NEWS {
     #banner {
         display: block;
-        // margin: 0 auto;
-        // box-shadow: $box-shadow;
+        box-shadow: $box-shadow;
         @for $i from 1 through 6 {
             #banner#{$i} {
                 background-image: url(./img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
@@ -93,6 +89,7 @@ nav {
                 width: 100vw;
                 max-width: 1800px;
                 height: calc(100vw/3) ;//用calc固定長寬比
+                max-height: 600px;
                 &:focus {
                     outline: none;
                 } //取消slick設定的黑框
@@ -106,12 +103,8 @@ nav {
             color: $mainColor;
             font-size: 40px;
         }
-        .slick-prev {
-            left: 5px;
-        }
-        .slick-next {
-            right: 20px;
-        }
+        .slick-prev {left: 5px;}
+        .slick-next {right: 20px;}
         //Slick adjust END
     }
 }
@@ -140,12 +133,12 @@ nav {
         }
 
         .info-card {
-            margin: 0 auto;
             width: 300px;
             height: 200px;
+            margin: 0 auto;
             background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
-            text-align: center;
             box-shadow: $box-shadow;
+            text-align: center;
             color: blanchedalmond;
             transition: 0.5s;
 
@@ -158,9 +151,9 @@ nav {
                 transition: 0.5s;
             }
 
-            &:focus {
+            &:focus {//取消slick設定的黑框
                 outline: none;
-            } //取消slick設定的黑框
+            }
             &:hover {
                 background-image: url(https://fakeimg.pl/300x200/abcdef/696969/);
 
@@ -170,7 +163,7 @@ nav {
                 h3 {
                     font-size: 24px;
                 }
-                &::after {
+                &::after {//TODO test
                     content: "IDK";
                 }
             }
