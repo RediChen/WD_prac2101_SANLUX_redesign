@@ -8,7 +8,7 @@ $text-shadow: 1px 1px 5px #666;
 $box-shadow: 1px 1px 5px #666;
 $desktop : 1025px ;//width lower bound
 $tablet : 1024px ;//width upper bound
-$desktop : 767px ;//width upper bound
+$mobile : 767px ;//width upper bound
 
 // 通用樣式區
 * {
@@ -22,7 +22,7 @@ a {
     margin: 15px 20%;
     border-color: #000;
 }
-.title-big {
+.title-big {//用class統一設定格式
     text-align: center;
     font-family: $font-zh ;
     font-weight: 700;
@@ -35,6 +35,7 @@ a {
     font-size: 24px;
 }
 //TODO add title-big
+// 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
     padding: 20px 0;
@@ -44,17 +45,25 @@ nav {
     background-color: $mainColor;
 
     #nav-link-wrap {
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        list-style: none;
         .nav-a {
-            display: inline-block;
-            position: relative;
+            // position: relative;
             bottom: 20px;
             margin: 0 7px 15px;
             font-family: $font-zh;
+            font-size: 20px;
             font-weight: 500;
             line-height: 100%;
             color: $textColor;
+            transition: .5s;
+
             &:hover {
-                text-shadow: 0 0 20px DarkBlue;
+                background-color: skyblue;
+                box-shadow: 0 0 40px skyBlue;
             }
         }
     }
@@ -81,7 +90,9 @@ nav {
                 background-image: url(./img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 37vh;
+                width: 100vw;
+                max-width: 1800px;
+                height: calc(100vw/3) ;//用calc固定長寬比
                 &:focus {
                     outline: none;
                 } //取消slick設定的黑框
@@ -96,26 +107,40 @@ nav {
             font-size: 40px;
         }
         .slick-prev {
-            left: 10px;
+            left: 5px;
         }
         .slick-next {
-            right: 10px;
+            right: 20px;
         }
         //Slick adjust END
     }
 }
 // 輪播圖 END ====================================================
-// 服務項目 ======================================================
+// 商品情報 ======================================================
 #info {
     max-width: 1080px;
     margin: 0 auto;
 
     #info-card-wrap {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
+
+        @media screen and (min-width : $desktop ) {
+            margin: 20px auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+        }
+        @media screen and (max-width : $tablet) {
+            width: 90vw;
+            margin: 0 auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        @media screen and (max-width : $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .info-card {
+            margin: 0 auto;
             width: 300px;
             height: 200px;
             background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
@@ -152,7 +177,7 @@ nav {
         }
     }
 }
-// 服務項目 END ==================================================
+// 商品情報 END ==================================================
 // 最新消息 ======================================================
 #news {
     text-align: center;

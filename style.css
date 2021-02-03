@@ -40,19 +40,34 @@ nav {
   background-color: cornflowerblue;
 }
 
+nav #nav-link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
 nav #nav-link-wrap .nav-a {
-  display: inline-block;
-  position: relative;
   bottom: 20px;
   margin: 0 7px 15px;
   font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
   font-weight: 500;
   line-height: 100%;
   color: AliceBlue;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 nav #nav-link-wrap .nav-a:hover {
-  text-shadow: 0 0 20px DarkBlue;
+  background-color: skyblue;
+  -webkit-box-shadow: 0 0 40px skyBlue;
+          box-shadow: 0 0 40px skyBlue;
 }
 
 nav #nav-soc a {
@@ -74,7 +89,9 @@ nav #nav-soc a:hover {
   background-image: url(./img/banner1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 37vh;
+  width: 100vw;
+  max-width: 1800px;
+  height: calc(100vw/3);
 }
 
 #NEWS #banner #banner1:focus {
@@ -85,7 +102,9 @@ nav #nav-soc a:hover {
   background-image: url(./img/banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 37vh;
+  width: 100vw;
+  max-width: 1800px;
+  height: calc(100vw/3);
 }
 
 #NEWS #banner #banner2:focus {
@@ -96,7 +115,9 @@ nav #nav-soc a:hover {
   background-image: url(./img/banner3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 37vh;
+  width: 100vw;
+  max-width: 1800px;
+  height: calc(100vw/3);
 }
 
 #NEWS #banner #banner3:focus {
@@ -107,7 +128,9 @@ nav #nav-soc a:hover {
   background-image: url(./img/banner4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 37vh;
+  width: 100vw;
+  max-width: 1800px;
+  height: calc(100vw/3);
 }
 
 #NEWS #banner #banner4:focus {
@@ -118,7 +141,9 @@ nav #nav-soc a:hover {
   background-image: url(./img/banner5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 37vh;
+  width: 100vw;
+  max-width: 1800px;
+  height: calc(100vw/3);
 }
 
 #NEWS #banner #banner5:focus {
@@ -129,7 +154,9 @@ nav #nav-soc a:hover {
   background-image: url(./img/banner6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 37vh;
+  width: 100vw;
+  max-width: 1800px;
+  height: calc(100vw/3);
 }
 
 #NEWS #banner #banner6:focus {
@@ -146,11 +173,11 @@ nav #nav-soc a:hover {
 }
 
 #NEWS #banner .slick-prev {
-  left: 10px;
+  left: 5px;
 }
 
 #NEWS #banner .slick-next {
-  right: 10px;
+  right: 20px;
 }
 
 #info {
@@ -161,12 +188,36 @@ nav #nav-soc a:hover {
 #info #info-card-wrap {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+}
+
+@media screen and (min-width: 1025px) {
+  #info #info-card-wrap {
+    margin: 20px auto;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #info #info-card-wrap {
+    width: 90vw;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #info #info-card-wrap {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 #info #info-card-wrap .info-card {
+  margin: 0 auto;
   width: 300px;
   height: 200px;
   background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
