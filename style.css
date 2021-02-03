@@ -15,10 +15,12 @@ a {
 }
 
 .title-big {
+  margin-top: 30px;
   text-align: center;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
   font-size: 36px;
+  color: #103a89;
 }
 
 .title-medium {
@@ -28,23 +30,71 @@ a {
   font-size: 24px;
 }
 
+.text-p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
 nav {
-  padding: 20px 0;
+  height: 80px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% auto 15%;
-      grid-template-columns: 15% auto 15%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: cornflowerblue;
 }
 
+@media screen and (min-width: 1025px) {
+  nav {
+    padding: 10px 0;
+    -ms-grid-columns: 15% auto 15%;
+        grid-template-columns: 15% auto 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    -ms-grid-columns: 100% 0;
+        grid-template-columns: 100% 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    height: 60px;
+  }
+}
+
+nav #menu-hbg {
+  margin: 0 15px 0 auto;
+  width: 32px;
+  height: 32px;
+  background-color: AliceBlue;
+  border-radius: 15%;
+}
+
+@media screen and (min-width: 1025px) {
+  nav #menu-hbg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #menu-hbg {
+    border: 3px solid AliceBlue;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav #menu-hbg {
+    border: none;
+  }
+}
+
 nav #nav-link-wrap {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -60,14 +110,28 @@ nav #nav-link-wrap .nav-a {
   font-weight: 500;
   line-height: 100%;
   color: AliceBlue;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 nav #nav-link-wrap .nav-a:hover {
   background-color: skyblue;
   -webkit-box-shadow: 0 0 40px skyBlue;
           box-shadow: 0 0 40px skyBlue;
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-link-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-link-wrap {
+    display: none;
+  }
 }
 
 nav #nav-soc a {
@@ -79,6 +143,18 @@ nav #nav-soc a {
 
 nav #nav-soc a:hover {
   background-color: #fff;
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-soc {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-soc {
+    display: none;
+  }
 }
 
 #NEWS #banner {
@@ -93,7 +169,7 @@ nav #nav-soc a:hover {
   background-repeat: no-repeat;
   width: 100vw;
   max-width: 1800px;
-  height: calc(100vw/3);
+  height: calc(100vw / 3);
   max-height: 600px;
 }
 
@@ -107,7 +183,7 @@ nav #nav-soc a:hover {
   background-repeat: no-repeat;
   width: 100vw;
   max-width: 1800px;
-  height: calc(100vw/3);
+  height: calc(100vw / 3);
   max-height: 600px;
 }
 
@@ -121,7 +197,7 @@ nav #nav-soc a:hover {
   background-repeat: no-repeat;
   width: 100vw;
   max-width: 1800px;
-  height: calc(100vw/3);
+  height: calc(100vw / 3);
   max-height: 600px;
 }
 
@@ -135,7 +211,7 @@ nav #nav-soc a:hover {
   background-repeat: no-repeat;
   width: 100vw;
   max-width: 1800px;
-  height: calc(100vw/3);
+  height: calc(100vw / 3);
   max-height: 600px;
 }
 
@@ -149,7 +225,7 @@ nav #nav-soc a:hover {
   background-repeat: no-repeat;
   width: 100vw;
   max-width: 1800px;
-  height: calc(100vw/3);
+  height: calc(100vw / 3);
   max-height: 600px;
 }
 
@@ -163,7 +239,7 @@ nav #nav-soc a:hover {
   background-repeat: no-repeat;
   width: 100vw;
   max-width: 1800px;
-  height: calc(100vw/3);
+  height: calc(100vw / 3);
   max-height: 600px;
 }
 
@@ -186,6 +262,30 @@ nav #nav-soc a:hover {
 
 #NEWS #banner .slick-next {
   right: 20px;
+}
+
+#NEWS #news-card-wrap {
+  margin: 0 5vw;
+}
+
+#NEWS #news-card-wrap .news-card {
+  border: 1px solid firebrick;
+}
+
+#NEWS #news-card-wrap .news-card img {
+  margin: 0 auto;
+}
+
+#NEWS #news-card-wrap .news-card p {
+  margin: 50px;
+}
+
+#NEWS #news-card-wrap .news-card button {
+  margin: 0 auto;
+}
+
+#NEWS #news-card-wrap .news-card:focus {
+  outline: none;
 }
 
 #info {
@@ -229,6 +329,7 @@ nav #nav-soc a:hover {
   height: 200px;
   margin: 0 auto;
   background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
+  background-size: cover;
   -webkit-box-shadow: 1px 1px 5px #666;
           box-shadow: 1px 1px 5px #666;
   text-align: center;
@@ -269,7 +370,7 @@ nav #nav-soc a:hover {
   content: "IDK";
 }
 
-#news {
+#market-channel {
   text-align: center;
 }
 
@@ -314,7 +415,7 @@ form input::placeholder {
   font-size: 14px;
 }
 
-form input[type=submit] {
+form input[type="submit"] {
   background-color: AliceBlue;
   border-color: cornflowerblue;
   color: cornflowerblue;
