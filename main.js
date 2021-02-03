@@ -7,6 +7,7 @@ $('#banner').slick(
     autoplay: true,
     autoplaySpeed: slickTime,
     cssEase: 'ease-in-out',
+    // dots: true,
     responsive: [
         {
             breakpoint: tablet,
