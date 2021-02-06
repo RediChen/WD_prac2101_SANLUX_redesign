@@ -17,12 +17,12 @@
         <div></div>
         <!--for 排版對稱的襯墊-->
         <ul id="nav-link-wrap">
-            <li class="nav-a"><a href="">最新消息</a></li>
-            <li class="nav-a"><a href="">商品情報</a></li>
-            <li class="nav-a"><a href="">銷售通路</a></li>
+            <li class="nav-a"><a href="#news">最新消息</a></li>
+            <li class="nav-a"><a href="#info">商品情報</a></li>
+            <li class="nav-a"><a href="#market-channel">銷售通路</a></li>
             <li class="logo" ><a href="#"><img src="./img/LOGO_temp.png" alt=""></a></li>
             <li class="nav-a"><a href="./service.html">售後服務</a></li>
-            <li class="nav-a"><a href="">投資專區</a></li>
+            <li class="nav-a"><a href="./invest/">投資專區</a></li>
             <li class="nav-a"><a href="">下載專區</a></li>
             <!-- RoHs認證 內移至商品情報 -->
         </ul>
@@ -32,7 +32,7 @@
     </nav>
     <!-- 導覽列 END ==================================================== -->
     <!-- 最新消息 ====================================================== -->
-    <section id="NEWS">
+    <section id="news">
         <div id="banner">
             <div id="banner1"></div>
             <div id="banner2"></div>
@@ -128,8 +128,9 @@
     <!-- 商品情報 END ======================================================= -->
     <!-- 銷售通路 =========================================================== -->
     <section id="market-channel">
-
-        
+        <h1 class="title-big">銷售通路</h1>
+        <hr class="hr-title">
+        這裡要放銷售通路的簡表，而且要作便於搜尋的設計。
     </section>
     <!-- 銷售通路 END ======================================================= -->
     <!-- 售後服務 =========================================================== -->
@@ -141,14 +142,14 @@
 
     <!-- 頁尾 =============================================================== -->
     <footer>
-        <div id="logo"><img src="./img/LOGO_temp.png" alt=""></div>
+        <div><a href="#"><img src="./img/LOGO_temp.png" alt="" /></a></div>
         <a class="text-p">Copyright &copy; 2014 Taiwan Sanyo</a>
     </footer>
     <!-- 頁尾 END =========================================================== -->
 
-    <!-- 連線jQuery庫 -->
+    <!-- CDN of jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Slick CDN ; under jQuery-->
+    <!-- CDN of Slick ; under jQuery-->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Our own JS：等前面的都連接完才可以讓JS去使用程式庫-->
     <script src="./main.js"></script>

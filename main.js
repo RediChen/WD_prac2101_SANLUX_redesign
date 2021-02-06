@@ -1,5 +1,5 @@
-const tablet = 1025 ;//upper bound + 1
-const mobile = 767 ;//upper bound + 1
+const tablet = 1025 ; //upper bound + 1
+const mobile = 767 ;  //upper bound + 1
 const slickTime = 2500 ;
 
 $('#banner').slick(

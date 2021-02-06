@@ -37,6 +37,7 @@ a {
 
 nav {
   height: 80px;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -48,6 +49,10 @@ nav {
 @media screen and (min-width: 1025px) {
   nav {
     padding: 10px 0;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 3;
     -ms-grid-columns: 7% auto 7%;
         grid-template-columns: 7% auto 7%;
   }
@@ -55,6 +60,7 @@ nav {
 
 @media screen and (max-width: 1024px) {
   nav {
+    position: initial;
     -ms-grid-columns: 100% 0;
         grid-template-columns: 100% 0;
   }
@@ -163,135 +169,132 @@ nav #nav-soc a:active {
   }
 }
 
-#NEWS #banner {
-  display: block;
+#news #banner {
+  width: 100%;
+  overflow: hidden;
   -webkit-box-shadow: 1px 1px 5px #666;
           box-shadow: 1px 1px 5px #666;
 }
 
-#NEWS #banner #banner1 {
+#news #banner #banner1 {
   background-image: url(./img/banner1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  max-width: 1800px;
   height: calc(100vw / 3);
+  max-width: 1800px;
   max-height: 600px;
 }
 
-#NEWS #banner #banner1:focus {
+#news #banner #banner1:focus {
   outline: none;
 }
 
-#NEWS #banner #banner2 {
+#news #banner #banner2 {
   background-image: url(./img/banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  max-width: 1800px;
   height: calc(100vw / 3);
+  max-width: 1800px;
   max-height: 600px;
 }
 
-#NEWS #banner #banner2:focus {
+#news #banner #banner2:focus {
   outline: none;
 }
 
-#NEWS #banner #banner3 {
+#news #banner #banner3 {
   background-image: url(./img/banner3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  max-width: 1800px;
   height: calc(100vw / 3);
+  max-width: 1800px;
   max-height: 600px;
 }
 
-#NEWS #banner #banner3:focus {
+#news #banner #banner3:focus {
   outline: none;
 }
 
-#NEWS #banner #banner4 {
+#news #banner #banner4 {
   background-image: url(./img/banner4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  max-width: 1800px;
   height: calc(100vw / 3);
+  max-width: 1800px;
   max-height: 600px;
 }
 
-#NEWS #banner #banner4:focus {
+#news #banner #banner4:focus {
   outline: none;
 }
 
-#NEWS #banner #banner5 {
+#news #banner #banner5 {
   background-image: url(./img/banner5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  max-width: 1800px;
   height: calc(100vw / 3);
+  max-width: 1800px;
   max-height: 600px;
 }
 
-#NEWS #banner #banner5:focus {
+#news #banner #banner5:focus {
   outline: none;
 }
 
-#NEWS #banner #banner6 {
+#news #banner #banner6 {
   background-image: url(./img/banner6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  max-width: 1800px;
   height: calc(100vw / 3);
+  max-width: 1800px;
   max-height: 600px;
 }
 
-#NEWS #banner #banner6:focus {
+#news #banner #banner6:focus {
   outline: none;
 }
 
-#NEWS #banner .slick-arrow {
-  z-index: 3;
+#news #banner .slick-track {
+  height: calc(100vw / 3);
 }
 
-#NEWS #banner .slick-arrow::before {
+#news #banner .slick-arrow::before {
   color: cornflowerblue;
   font-size: 40px;
 }
 
-#NEWS #banner .slick-prev {
-  left: 5px;
+#news #banner .slick-prev {
+  left: 15px;
+  z-index: 3;
 }
 
-#NEWS #banner .slick-next {
+#news #banner .slick-next {
   right: 20px;
 }
 
-#NEWS #news-card-wrap {
-  margin: 0 5vw;
-}
-
-#NEWS #news-card-wrap .news-card {
-  border: 1px solid firebrick;
-}
-
-#NEWS #news-card-wrap .news-card img {
+#news #news-card-wrap {
+  width: 90%;
   margin: 0 auto;
 }
 
-#NEWS #news-card-wrap .news-card p {
+#news #news-card-wrap .news-card {
+  border: 1px solid firebrick;
+}
+
+#news #news-card-wrap .news-card img {
+  margin: 0 auto;
+}
+
+#news #news-card-wrap .news-card p {
   margin: 50px;
 }
 
-#NEWS #news-card-wrap .news-card button {
+#news #news-card-wrap .news-card button {
   display: block;
   margin: 0 auto;
 }
 
-#NEWS #news-card-wrap .news-card:focus {
+#news #news-card-wrap .news-card:focus {
   outline: none;
 }
 
@@ -316,7 +319,7 @@ nav #nav-soc a:active {
 
 @media screen and (max-width: 1024px) {
   #info #info-card-wrap {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -347,14 +350,14 @@ nav #nav-soc a:active {
 
 #info #info-card-wrap .info-card h2 {
   font-family: "Noto Sans TC", sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: font-size 0.5s;
+  transition: font-size 0.5s;
 }
 
 #info #info-card-wrap .info-card h3 {
   font-family: "Montserrat", sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: font-size 0.5s;
+  transition: font-size 0.5s;
 }
 
 #info #info-card-wrap .info-card:focus {
@@ -381,92 +384,14 @@ nav #nav-soc a:active {
   text-align: center;
 }
 
-form {
-  margin: 100px 50px;
-}
-
-form div {
-  margin: 10px 0;
-  padding: 10px;
-}
-
-form input {
-  width: 100%;
-}
-
-form input::-webkit-input-placeholder {
-  color: #666666;
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-form input:-ms-input-placeholder {
-  color: #666666;
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-form input::-ms-input-placeholder {
-  color: #666666;
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-form input::placeholder {
-  color: #666666;
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-form input[type="submit"] {
-  background-color: AliceBlue;
-  border-color: cornflowerblue;
-  color: cornflowerblue;
-}
-
-form textarea {
-  width: 100%;
-  height: 100px;
-}
-
-form textarea::-webkit-input-placeholder {
-  color: #777777;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
-  padding: 5px 0 0 15px;
-}
-
-form textarea:-ms-input-placeholder {
-  color: #777777;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
-  padding: 5px 0 0 15px;
-}
-
-form textarea::-ms-input-placeholder {
-  color: #777777;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
-  padding: 5px 0 0 15px;
-}
-
-form textarea::placeholder {
-  color: #777777;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
-  padding: 5px 0 0 15px;
-}
-
 footer {
-  background-color: #999999;
   height: 200px;
+  width: 100%;
+  background-color: #999999;
   padding-top: 30px;
   -webkit-box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
           box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
   text-align: center;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
