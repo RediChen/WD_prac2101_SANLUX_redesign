@@ -15,7 +15,7 @@ a {
 }
 
 .title-big {
-  margin-top: 30px;
+  margin-top: 100px;
   text-align: center;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
@@ -170,8 +170,12 @@ nav #nav-soc a:active {
 }
 
 #news #banner {
+  height: calc(100% / 3);
   width: 100%;
+  max-width: 1800px;
+  max-height: 600px;
   overflow: hidden;
+  margin: 0 auto;
   -webkit-box-shadow: 1px 1px 5px #666;
           box-shadow: 1px 1px 5px #666;
 }
@@ -181,8 +185,6 @@ nav #nav-soc a:active {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
-  max-width: 1800px;
-  max-height: 600px;
 }
 
 #news #banner #banner1:focus {
@@ -194,8 +196,6 @@ nav #nav-soc a:active {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
-  max-width: 1800px;
-  max-height: 600px;
 }
 
 #news #banner #banner2:focus {
@@ -207,8 +207,6 @@ nav #nav-soc a:active {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
-  max-width: 1800px;
-  max-height: 600px;
 }
 
 #news #banner #banner3:focus {
@@ -220,8 +218,6 @@ nav #nav-soc a:active {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
-  max-width: 1800px;
-  max-height: 600px;
 }
 
 #news #banner #banner4:focus {
@@ -233,8 +229,6 @@ nav #nav-soc a:active {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
-  max-width: 1800px;
-  max-height: 600px;
 }
 
 #news #banner #banner5:focus {
@@ -246,16 +240,10 @@ nav #nav-soc a:active {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
-  max-width: 1800px;
-  max-height: 600px;
 }
 
 #news #banner #banner6:focus {
   outline: none;
-}
-
-#news #banner .slick-track {
-  height: calc(100vw / 3);
 }
 
 #news #banner .slick-arrow::before {
@@ -331,6 +319,7 @@ nav #nav-soc a:active {
   #info #info-card-wrap {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+    grid-gap: 60px;
   }
 }
 

@@ -25,7 +25,7 @@ a {
 }
 .title-big {
     //用class統一設定格式
-    margin-top: 30px;
+    margin-top: 100px;
     text-align: center;
     font-family: $font-zh;
     font-weight: 700;
@@ -138,26 +138,25 @@ nav {
     // width: 100%;
     // Banner區 ===================
     #banner {
+        height: calc(100% / 3); //用calc固定長寬比
         width: 100%;
+        max-width: 1800px;
+        max-height: 600px;
         overflow: hidden;
+        margin: 0 auto ;
         box-shadow: $box-shadow;
         @for $i from 1 through 6 {
             #banner#{$i} {
                 background-image: url(./img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: calc(100vw / 3); //用calc固定長寬比
-                max-width: 1800px;
-                max-height: 600px;
+                height: calc(100vw / 3); //用calc固定長寬比。必須撐開高度，否則其預設為h=1px。
                 &:focus {
                     outline: none;
                 } //取消slick設定的黑框
             }
         }
         //Slick adjust
-        .slick-track {//必由此撐開高度，否則其預設為h=1px
-            height: calc(100vw / 3); //用calc固定長寬比
-        }
         .slick-arrow::before {
             color: $mainColor;
             font-size: 40px;
