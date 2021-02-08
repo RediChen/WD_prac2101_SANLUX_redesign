@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+a:link, a:visited {
+  color: AliceBlue;
+}
+
 .hr-title {
   margin: 15px 20%;
   border-color: #000;
@@ -115,7 +119,6 @@ nav #nav-link-wrap .nav-a {
   font-size: 28px;
   font-weight: 500;
   line-height: 100%;
-  color: AliceBlue;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -138,6 +141,33 @@ nav #nav-link-wrap .nav-a:hover {
   nav #nav-link-wrap {
     display: none;
   }
+}
+
+nav .sub-link {
+  background-color: #103a89;
+  position: absolute;
+  top: 100px;
+  padding-bottom: 15px;
+  -webkit-box-shadow: 1px 1px 5px #666;
+          box-shadow: 1px 1px 5px #666;
+}
+
+nav .sub-link:hover {
+  display: block;
+}
+
+nav .sub-link a {
+  display: block;
+  margin: 0 15px;
+  line-height: 2.5;
+}
+
+nav #sub-link-service {
+  right: 375px;
+}
+
+nav #sub-link-dlc {
+  right: 109px;
 }
 
 nav #nav-soc a {

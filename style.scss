@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
-$mainColor: cornflowerblue;
-$secColor: AliceBlue;
-$tColor: #103a89;
+$color-main: cornflowerblue;
+$color-sec: AliceBlue;
+$color-text: #103a89;
 $font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
 $font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
 $text-shadow: 1px 1px 5px #666;
@@ -18,6 +18,10 @@ $mobile: 767px; //width upper bound
 }
 a {
     text-decoration: none;
+    &:link,
+    &:visited {
+        color: $color-sec;
+    }
 }
 .hr-title {
     margin: 15px 20%;
@@ -30,7 +34,7 @@ a {
     font-family: $font-zh;
     font-weight: 700;
     font-size: 36px;
-    color: $tColor;
+    color: $color-text;
 }
 .title-medium {
     text-align: center;
@@ -49,7 +53,7 @@ nav {
     width: 100%;
     display: grid;
     align-items: center;
-    background-color: $mainColor;
+    background-color: $color-main;
     @media screen and (min-width: $desktop) {
         padding: 10px 0;
         top: 0;
@@ -70,7 +74,7 @@ nav {
         margin: 0 15px 0 auto; //置右的實現方法
         width: 32px;
         height: 32px;
-        background-color: $secColor;
+        background-color: $color-sec;
         border-radius: 15%;
 
         @media screen and (min-width: $desktop) {
@@ -78,7 +82,7 @@ nav {
         }
         @media screen and (max-width: $tablet) {
             //平板&手機共用
-            border: 3px solid $secColor;
+            border: 3px solid $color-sec;
             display: block;
         }
         @media screen and (max-width: $mobile) {
@@ -97,7 +101,6 @@ nav {
             font-size: 28px;
             font-weight: 500;
             line-height: 100%;
-            color: $secColor;
             transition: 0.5s;
 
             &:hover {
@@ -111,6 +114,31 @@ nav {
         @media screen and (max-width: $tablet) {
             display: none;
         }
+    }
+    .sub-link {
+        background-color: $color-text;
+        position: absolute;
+        top: 100px;
+        padding-bottom: 15px;
+        box-shadow: $box-shadow;
+
+        //統一設定隱藏和顯示
+        // display: none;
+        &:hover {
+            display: block;
+        }
+
+        a {
+            display: block;
+            margin: 0 15px;
+            line-height: 2.5;
+        }
+    }
+    #sub-link-service {
+        right: 375px;
+    }
+    #sub-link-dlc {
+        right: 109px;
     }
     #nav-soc {
         a {
@@ -143,7 +171,7 @@ nav {
         max-width: 1800px;
         max-height: 600px;
         overflow: hidden;
-        margin: 0 auto ;
+        margin: 0 auto;
         box-shadow: $box-shadow;
         @for $i from 1 through 6 {
             #banner#{$i} {
@@ -158,7 +186,7 @@ nav {
         }
         //Slick adjust
         .slick-arrow::before {
-            color: $mainColor;
+            color: $color-main;
             font-size: 40px;
         }
         .slick-prev {
