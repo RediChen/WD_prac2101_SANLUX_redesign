@@ -91,12 +91,15 @@ nav {
     }
     #nav-link-wrap {
         margin: 0 auto;
+        // height: 100px;
+        position: relative;
         text-align: center;
         align-items: center;
         list-style: none;
         .nav-a {
             bottom: 20px;
-            margin: 0 7px 15px;
+            margin: auto 7px;
+            // height: 300px;
             font-family: $font-zh;
             font-size: 28px;
             font-weight: 500;
@@ -104,8 +107,13 @@ nav {
             transition: 0.5s;
 
             &:hover {
-                background-color: skyblue;
-                box-shadow: 0 0 40px skyBlue;
+                background-color: rgba($color: skyBlue, $alpha: 0.3);
+                text-shadow: 0 0 10px 10px skyBlue;
+
+                .sub-link {
+                    //[A] 顯示&消失
+                    display: block;
+                }
             }
         }
         @media screen and (min-width: $desktop) {
@@ -118,27 +126,32 @@ nav {
     .sub-link {
         background-color: $color-text;
         position: absolute;
-        top: 100px;
-        padding-bottom: 15px;
+        top: 87px;
         box-shadow: $box-shadow;
 
         //統一設定隱藏和顯示
-        // display: none;
+        //! 但是顯示的觸發，老師的方法是把
+        display: none;
         &:hover {
+            //[A] 顯示&消失
             display: block;
         }
 
         a {
+            //[A] 顯示&消失
             display: block;
-            margin: 0 15px;
-            line-height: 2.5;
+            padding: 0 15px;
+            line-height: 3;
+            &:hover {
+                background-color: $color-main;
+            }
         }
     }
     #sub-link-service {
-        right: 375px;
+        right: 233px;
     }
     #sub-link-dlc {
-        right: 109px;
+        right: -35px;
     }
     #nav-soc {
         a {

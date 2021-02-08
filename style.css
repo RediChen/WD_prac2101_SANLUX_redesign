@@ -105,6 +105,7 @@ nav #menu-hbg {
 
 nav #nav-link-wrap {
   margin: 0 auto;
+  position: relative;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -114,7 +115,7 @@ nav #nav-link-wrap {
 
 nav #nav-link-wrap .nav-a {
   bottom: 20px;
-  margin: 0 7px 15px;
+  margin: auto 7px;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 28px;
   font-weight: 500;
@@ -124,9 +125,12 @@ nav #nav-link-wrap .nav-a {
 }
 
 nav #nav-link-wrap .nav-a:hover {
-  background-color: skyblue;
-  -webkit-box-shadow: 0 0 40px skyBlue;
-          box-shadow: 0 0 40px skyBlue;
+  background-color: rgba(135, 206, 235, 0.3);
+  text-shadow: 0 0 10px 10px skyBlue;
+}
+
+nav #nav-link-wrap .nav-a:hover .sub-link {
+  display: block;
 }
 
 @media screen and (min-width: 1025px) {
@@ -146,10 +150,10 @@ nav #nav-link-wrap .nav-a:hover {
 nav .sub-link {
   background-color: #103a89;
   position: absolute;
-  top: 100px;
-  padding-bottom: 15px;
+  top: 87px;
   -webkit-box-shadow: 1px 1px 5px #666;
           box-shadow: 1px 1px 5px #666;
+  display: none;
 }
 
 nav .sub-link:hover {
@@ -158,16 +162,20 @@ nav .sub-link:hover {
 
 nav .sub-link a {
   display: block;
-  margin: 0 15px;
-  line-height: 2.5;
+  padding: 0 15px;
+  line-height: 3;
+}
+
+nav .sub-link a:hover {
+  background-color: cornflowerblue;
 }
 
 nav #sub-link-service {
-  right: 375px;
+  right: 233px;
 }
 
 nav #sub-link-dlc {
-  right: 109px;
+  right: -35px;
 }
 
 nav #nav-soc a {
