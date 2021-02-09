@@ -46,19 +46,22 @@ a {
     font-family: $font-zh;
     font-weight: 400;
 }
+.logo {
+    margin: auto 0;
+}
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
-    height: 80px;
     width: 100%;
     display: grid;
     align-items: center;
     background-color: $color-main;
     @media screen and (min-width: $desktop) {
-        height: 100px;
+        max-height: 100px;
+        padding: 10px 0;
         top: 0;
         position: sticky; //抵達fixed原則的指定定位才會啟動效果
-        z-index: 3;
+        z-index: 2;
         grid-template-columns: 7% auto 7%;
     }
     @media screen and (max-width: $tablet) {
@@ -67,12 +70,12 @@ nav {
         grid-template-columns: 100% 0;
     }
     @media screen and (max-width: $mobile) {
-        height: 60px;
+        max-height: 60px;
     }
 
     // Part 0 for RWD
     #menu-hbg {
-        margin: 0 15px 0 auto; //置右的實現方法
+        margin: 0 10px 0 auto; //置右的實現方法
         width: 32px;
         height: 32px;
         background-color: $color-sec;
@@ -83,41 +86,39 @@ nav {
         }
         @media screen and (max-width: $tablet) {
             //平板&手機共用
-            border: 3px solid $color-sec;
+            border: 3px solid $color-sec; //放大效果
             display: block;
         }
         @media screen and (max-width: $mobile) {
             border: none;
         }
     }
-    // Part I for 排版對稱的襯墊
+    // Part II for 導覽列主要連結
     #nav-link-wrap {
         @media screen and (min-width: $desktop) {
             display: flex;
             margin: 0 auto;
-            // height: 100px;
             position: relative;
             text-align: center;
             list-style: none;
         }
         li {
-            border: 3px solid darkkhaki; //TODO TEST
-            align-items: center;
-            height: 80px;
+            margin: 0 7px;
+            position: relative;
+            left: 0;
+
             .nav-a {
                 position: relative;
-                top: 20px ;
-                margin: 0 7px;
-                // height: 300px;
+                top: 20px;
+                border-top: 3px solid transparent;
                 font-family: $font-zh;
-                font-size: 28px;
+                font-size: 24px;
                 font-weight: 500;
                 line-height: 100%;
-                transition: 0.5s;
+                transition: border 0.5s;
             }
             &:hover {
-                border-top: 3px solid $color-sec ;
-
+                .nav-a {border-top: 3px solid $color-sec;}
                 .sub-link {
                     //[A] 顯示&消失
                     display: block;
@@ -126,12 +127,14 @@ nav {
         }
         @media screen and (max-width: $tablet) {
             display: none;
-        }
+        } //平板&手機共用
 
         .sub-link {
             background-color: $color-text;
             position: absolute;
-            top: 90px;
+            width: 130%; //* 是怎麼作到的
+            top: 85px;
+            left: -15%; //* 是怎麼作到的
             box-shadow: $box-shadow;
 
             //統一設定隱藏和顯示
@@ -156,19 +159,20 @@ nav {
 
     // Part III for 社群連結
     #nav-soc {
-        a {
-            height: 25px;
-            margin: auto 10px auto auto;
-            transition: 0.5s;
-            &:hover {
-                filter: sepia(100%);
-            }
-            &:active {
-                filter: invert(0.3);
-            }
-        }
         @media screen and (min-width: $desktop) {
-            display: block;
+            display: initial;
+            width: 32px;
+            height: 32px;
+            a {
+                margin: 0 10px auto 0;
+                transition: 0.5s;
+                &:hover {
+                    filter: sepia(100%) drop-shadow(0 0 1px $color-sec);
+                }
+                &:active {
+                    filter: invert(0.3);
+                }
+            }
         }
         @media screen and (max-width: $tablet) {
             display: none;
