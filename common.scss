@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+$color-main: cornflowerblue;
+$color-sec: AliceBlue;
+$color-text: #103a89;
+$font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
+$font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
+$text-shadow: 1px 1px 5px #666;
+$box-shadow: 1px 1px 5px #666;
+$desktop: 1025px; //width lower bound
+$tablet: 1024px; //width upper bound
+$mobile: 767px; //width upper bound
+
+// 通用樣式區
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    &:link,
+    &:visited {
+        color: $color-sec;
+    }
+}
+.hr-title {
+    margin: 15px 20%;
+    border-color: #000;
+}
+.title-big {
+    //用class統一設定格式
+    margin-top: 100px;
+    text-align: center;
+    font-family: $font-zh;
+    font-weight: 700;
+    font-size: 36px;
+    color: $color-text;
+}
+.title-medium {
+    text-align: center;
+    font-family: $font-zh;
+    font-weight: 500;
+    font-size: 24px;
+}
+.text-p {
+    font-family: $font-zh;
+    font-weight: 400;
+}
+// 通用樣式區 END ================================================
+// 導覽列 ========================================================
+nav {
+    height: 80px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    background-color: $color-main;
+    @media screen and (min-width: $desktop) {
+        height: 100px;
+        top: 0;
+        position: sticky; //抵達fixed原則的指定定位才會啟動效果
+        z-index: 3;
+        grid-template-columns: 7% auto 7%;
+    }
+    @media screen and (max-width: $tablet) {
+        //平板&手機共用
+        position: initial;
+        grid-template-columns: 100% 0;
+    }
+    @media screen and (max-width: $mobile) {
+        height: 60px;
+    }
+
+    // Part 0 for RWD
+    #menu-hbg {
+        margin: 0 15px 0 auto; //置右的實現方法
+        width: 32px;
+        height: 32px;
+        background-color: $color-sec;
+        border-radius: 15%;
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+        @media screen and (max-width: $tablet) {
+            //平板&手機共用
+            border: 3px solid $color-sec;
+            display: block;
+        }
+        @media screen and (max-width: $mobile) {
+            border: none;
+        }
+    }
+    // Part I for 排版對稱的襯墊
+    #nav-link-wrap {
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            margin: 0 auto;
+            // height: 100px;
+            position: relative;
+            text-align: center;
+            list-style: none;
+        }
+        li {
+            border: 3px solid darkkhaki; //TODO TEST
+            align-items: center;
+            height: 80px;
+            .nav-a {
+                position: relative;
+                top: 20px ;
+                margin: 0 7px;
+                // height: 300px;
+                font-family: $font-zh;
+                font-size: 28px;
+                font-weight: 500;
+                line-height: 100%;
+                transition: 0.5s;
+            }
+            &:hover {
+                border-top: 3px solid $color-sec ;
+
+                .sub-link {
+                    //[A] 顯示&消失
+                    display: block;
+                }
+            }
+        }
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
+        .sub-link {
+            background-color: $color-text;
+            position: absolute;
+            top: 90px;
+            box-shadow: $box-shadow;
+
+            //統一設定隱藏和顯示
+            //! 顯示的觸發：老師的方法是把膠囊拉長，但nav限制高度。
+            display: none;
+            &:hover {
+                //[A] 顯示&消失
+                display: block;
+            }
+
+            a {
+                //[A] 顯示&消失
+                display: block;
+                padding: 0 15px;
+                line-height: 3;
+                &:hover {
+                    background-color: $color-main;
+                }
+            }
+        }
+    }
+
+    // Part III for 社群連結
+    #nav-soc {
+        a {
+            height: 25px;
+            margin: auto 10px auto auto;
+            transition: 0.5s;
+            &:hover {
+                filter: sepia(100%);
+            }
+            &:active {
+                filter: invert(0.3);
+            }
+        }
+        @media screen and (min-width: $desktop) {
+            display: block;
+        }
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+}
+// 導覽列 END ====================================================
+// 頁尾 ===============================================================
+footer {
+    height: 200px; //TODO
+    width: 100%;
+    background-color: #999999;
+    padding-top: 30px;
+    box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
+    text-align: center;
+    overflow: hidden;
+}
+// 頁尾 END ===========================================================

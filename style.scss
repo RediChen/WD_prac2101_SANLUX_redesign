@@ -11,170 +11,7 @@ $desktop: 1025px; //width lower bound
 $tablet: 1024px; //width upper bound
 $mobile: 767px; //width upper bound
 
-// 通用樣式區
-* {
-    margin: 0;
-    padding: 0;
-}
-a {
-    text-decoration: none;
-    &:link,
-    &:visited {
-        color: $color-sec;
-    }
-}
-.hr-title {
-    margin: 15px 20%;
-    border-color: #000;
-}
-.title-big {
-    //用class統一設定格式
-    margin-top: 100px;
-    text-align: center;
-    font-family: $font-zh;
-    font-weight: 700;
-    font-size: 36px;
-    color: $color-text;
-}
-.title-medium {
-    text-align: center;
-    font-family: $font-zh;
-    font-weight: 500;
-    font-size: 24px;
-}
-.text-p {
-    font-family: $font-zh;
-    font-weight: 400;
-}
-// 通用樣式區 END ================================================
-// 導覽列 ========================================================
-nav {
-    height: 80px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    background-color: $color-main;
-    @media screen and (min-width: $desktop) {
-        padding: 10px 0;
-        top: 0;
-        position: sticky; //抵達fixed原則的指定定位才會啟動效果
-        z-index: 3;
-        grid-template-columns: 7% auto 7%;
-    }
-    @media screen and (max-width: $tablet) {
-        //平板&手機共用
-        position: initial;
-        grid-template-columns: 100% 0;
-    }
-    @media screen and (max-width: $mobile) {
-        height: 60px;
-    }
-
-    #menu-hbg {
-        margin: 0 15px 0 auto; //置右的實現方法
-        width: 32px;
-        height: 32px;
-        background-color: $color-sec;
-        border-radius: 15%;
-
-        @media screen and (min-width: $desktop) {
-            display: none;
-        }
-        @media screen and (max-width: $tablet) {
-            //平板&手機共用
-            border: 3px solid $color-sec;
-            display: block;
-        }
-        @media screen and (max-width: $mobile) {
-            border: none;
-        }
-    }
-    #nav-link-wrap {
-        margin: 0 auto;
-        // height: 100px;
-        position: relative;
-        text-align: center;
-        align-items: center;
-        list-style: none;
-        .nav-a {
-            bottom: 20px;
-            margin: auto 7px;
-            // height: 300px;
-            font-family: $font-zh;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 100%;
-            transition: 0.5s;
-
-            &:hover {
-                background-color: rgba($color: skyBlue, $alpha: 0.3);
-                text-shadow: 0 0 10px 10px skyBlue;
-
-                .sub-link {
-                    //[A] 顯示&消失
-                    display: block;
-                }
-            }
-        }
-        @media screen and (min-width: $desktop) {
-            display: flex;
-        }
-        @media screen and (max-width: $tablet) {
-            display: none;
-        }
-    }
-    .sub-link {
-        background-color: $color-text;
-        position: absolute;
-        top: 87px;
-        box-shadow: $box-shadow;
-
-        //統一設定隱藏和顯示
-        //! 但是顯示的觸發，老師的方法是把
-        display: none;
-        &:hover {
-            //[A] 顯示&消失
-            display: block;
-        }
-
-        a {
-            //[A] 顯示&消失
-            display: block;
-            padding: 0 15px;
-            line-height: 3;
-            &:hover {
-                background-color: $color-main;
-            }
-        }
-    }
-    #sub-link-service {
-        right: 233px;
-    }
-    #sub-link-dlc {
-        right: -35px;
-    }
-    #nav-soc {
-        a {
-            height: 25px;
-            margin: auto 10px auto auto;
-            transition: 0.5s;
-            &:hover {
-                filter: sepia(100%);
-            }
-            &:active {
-                filter: invert(0.3);
-            }
-        }
-        @media screen and (min-width: $desktop) {
-            display: block;
-        }
-        @media screen and (max-width: $tablet) {
-            display: none;
-        }
-    }
-}
-// 導覽列 END ====================================================
-// 最新消息 ======================================================
+// 最新消息 ===========================================================
 #news {
     // width: 100%;
     // Banner區 ===================
@@ -207,7 +44,7 @@ nav {
             z-index: 3;
         }
         .slick-next {
-            right: 20px;
+            right: 35px;
         }
         //Slick adjust END
     }
@@ -237,8 +74,8 @@ nav {
     }
     // 公告區 END =================
 }
-// 最新消息 END ====================================================
-// 商品情報 ======================================================
+// 最新消息 END =======================================================
+// 商品情報 ===========================================================
 #info {
     max-width: 1080px;
     margin: 0 auto;
@@ -315,14 +152,3 @@ nav {
 // 投資專區 END =======================================================
 // 下載專區 ===========================================================
 // 下載專區 END =======================================================
-// 頁尾 ===============================================================
-footer {
-    height: 200px; //TODO
-    width: 100%;
-    background-color: #999999;
-    padding-top: 30px;
-    box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
-    text-align: center;
-    overflow: hidden;
-}
-// 頁尾 END ===========================================================

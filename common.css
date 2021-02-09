@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: AliceBlue;
+}
+
+.hr-title {
+  margin: 15px 20%;
+  border-color: #000;
+}
+
+.title-big {
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #103a89;
+}
+
+.title-medium {
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.text-p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: cornflowerblue;
+}
+
+@media screen and (min-width: 1025px) {
+  nav {
+    height: 100px;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 3;
+    -ms-grid-columns: 7% auto 7%;
+        grid-template-columns: 7% auto 7%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    position: initial;
+    -ms-grid-columns: 100% 0;
+        grid-template-columns: 100% 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    height: 60px;
+  }
+}
+
+nav #menu-hbg {
+  margin: 0 15px 0 auto;
+  width: 32px;
+  height: 32px;
+  background-color: AliceBlue;
+  border-radius: 15%;
+}
+
+@media screen and (min-width: 1025px) {
+  nav #menu-hbg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #menu-hbg {
+    border: 3px solid AliceBlue;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav #menu-hbg {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-link-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    list-style: none;
+  }
+}
+
+nav #nav-link-wrap li {
+  border: 3px solid darkkhaki;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+nav #nav-link-wrap li .nav-a {
+  position: relative;
+  top: 20px;
+  margin: 0 7px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav #nav-link-wrap li:hover {
+  border-top: 3px solid AliceBlue;
+}
+
+nav #nav-link-wrap li:hover .sub-link {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-link-wrap {
+    display: none;
+  }
+}
+
+nav #nav-link-wrap .sub-link {
+  background-color: #103a89;
+  position: absolute;
+  top: 90px;
+  -webkit-box-shadow: 1px 1px 5px #666;
+          box-shadow: 1px 1px 5px #666;
+  display: none;
+}
+
+nav #nav-link-wrap .sub-link:hover {
+  display: block;
+}
+
+nav #nav-link-wrap .sub-link a {
+  display: block;
+  padding: 0 15px;
+  line-height: 3;
+}
+
+nav #nav-link-wrap .sub-link a:hover {
+  background-color: cornflowerblue;
+}
+
+nav #nav-soc a {
+  height: 25px;
+  margin: auto 10px auto auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav #nav-soc a:hover {
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+}
+
+nav #nav-soc a:active {
+  -webkit-filter: invert(0.3);
+          filter: invert(0.3);
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-soc {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-soc {
+    display: none;
+  }
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #999999;
+  padding-top: 30px;
+  -webkit-box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
+  text-align: center;
+  overflow: hidden;
+}
+/*# sourceMappingURL=common.css.map */
