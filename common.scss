@@ -5,8 +5,8 @@ $color-sec: AliceBlue;
 $color-text: #103a89;
 $font-zh: "Noto Sans TC", sans-serif; //400, 500, 700, 900
 $font-en: "Montserrat", sans-serif; //normal & italic ; 300~900
-$text-shadow: 1px 1px 5px #666;
-$box-shadow: 1px 1px 5px #666;
+$shadow-text: 1px 1px 5px #666;
+$shadow-box: 1px 1px 5px #666;
 $desktop: 1025px; //width lower bound
 $tablet: 1024px; //width upper bound
 $mobile: 767px; //width upper bound
@@ -53,16 +53,16 @@ a {
     height: auto;
     width: auto;
     border-radius: 5px;
-    transition: .5s;
+    transition: box-shadow .5s;
 
     &:hover {
-        box-shadow: 0 5px 12px rgba($color-sec,0.3);
+        box-shadow: 0 3px 10px rgba($color-sec,0.6);
     }
 }
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
-    $h-nav: 100px;
+    $h-nav: 100px;//desktop size
 
     width: 100%;
     display: grid;
@@ -156,7 +156,7 @@ nav {
                 left: (100% - $scale-perc) / 2; //* 讓sub-link與上方置中
                 top: $h-nav;
                 background-color: $color-text;
-                box-shadow: $box-shadow;
+                box-shadow: $shadow-box;
 
                 //統一設定隱藏和顯示
                 //! 顯示的觸發：老師的方法是把膠囊拉長，但nav限制高度。

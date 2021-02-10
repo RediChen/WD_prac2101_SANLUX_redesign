@@ -43,13 +43,15 @@ a:link, a:visited {
   height: auto;
   width: auto;
   border-radius: 5px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: -webkit-box-shadow .5s;
+  transition: -webkit-box-shadow .5s;
+  transition: box-shadow .5s;
+  transition: box-shadow .5s, -webkit-box-shadow .5s;
 }
 
 .logo img:hover {
-  -webkit-box-shadow: 0 5px 12px rgba(240, 248, 255, 0.3);
-          box-shadow: 0 5px 12px rgba(240, 248, 255, 0.3);
+  -webkit-box-shadow: 0 3px 10px rgba(240, 248, 255, 0.6);
+          box-shadow: 0 3px 10px rgba(240, 248, 255, 0.6);
 }
 
 nav {
