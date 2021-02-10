@@ -49,13 +49,20 @@ a {
     font-family: $font-zh;
     font-weight: 400;
 }
-.logo {
-    margin: auto 0;
+.logo img {
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    transition: .5s;
+
+    &:hover {
+        box-shadow: 0 5px 12px rgba(#666,0.3);
+    }
 }
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
-    $h-nav : 100px ;
+    $h-nav: 100px;
 
     width: 100%;
     display: grid;
@@ -119,7 +126,7 @@ nav {
                     //故使用此top&transfrom組合技，用既定的父元素高度計算位移
                     display: block; // for transform
                     position: relative;
-                    top: $h-nav / 2 ;
+                    top: $h-nav / 2;
                     transform: translateY(-50%);
                 }
 
@@ -138,33 +145,29 @@ nav {
                     .sub-link {
                         //[A] 顯示&消失
                         display: block;
-                        //[B] 縮小&放大
+                        //[B] 伸長&縮回
                     }
                 }
             }
             .sub-link {
-                $scale-perc: 140%;//sub-link 置中定位使用
+                $scale-perc: 140%; //sub-link 置中定位使用
                 position: absolute;
                 width: $scale-perc; //* 放大以避免內容換行
                 left: (100% - $scale-perc) / 2; //* 讓sub-link與上方置中
-                top: $h-nav ;
+                top: $h-nav;
                 background-color: $color-text;
                 box-shadow: $box-shadow;
 
                 //統一設定隱藏和顯示
                 //! 顯示的觸發：老師的方法是把膠囊拉長，但nav限制高度。
                 display: none;
-                &:hover {
-                    //[A] 顯示&消失
-                    display: block;
-                    //[B] 伸長&縮回
-                }
 
                 a {
-                    display: block;//讓hover效果可以以整片呈現
+                    display: block; //讓hover效果可以以整片呈現
                     height: 100%;
-                    padding: 0 15px;
+                    padding: 0 5px;
                     line-height: 3;
+
                     &:hover {
                         background-color: $color-main;
                     }

@@ -39,8 +39,17 @@ a:link, a:visited {
   font-weight: 400;
 }
 
-.logo {
-  margin: auto 0;
+.logo img {
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.logo img:hover {
+  -webkit-box-shadow: 0 5px 12px rgba(102, 102, 102, 0.3);
+          box-shadow: 0 5px 12px rgba(102, 102, 102, 0.3);
 }
 
 nav {
@@ -152,13 +161,10 @@ nav #nav-link-wrap {
             box-shadow: 1px 1px 5px #666;
     display: none;
   }
-  nav #nav-link-wrap .sub-link:hover {
-    display: block;
-  }
   nav #nav-link-wrap .sub-link a {
     display: block;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 5px;
     line-height: 3;
   }
   nav #nav-link-wrap .sub-link a:hover {
