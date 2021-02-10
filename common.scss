@@ -67,6 +67,7 @@ nav {
     @media screen and (max-width: $tablet) {
         //平板&手機共用
         position: initial;
+        height: 70px;
         grid-template-columns: 100% 0;
     }
     @media screen and (max-width: $mobile) {
@@ -75,9 +76,9 @@ nav {
 
     // Part 0 for RWD
     #menu-hbg {
-        margin: 0 10px 0 auto; //置右的實現方法
         width: 32px;
         height: 32px;
+        margin: 0 20px 0 auto; //置右的實現方法
         background-color: $color-sec;
         border-radius: 15%;
 
@@ -90,7 +91,7 @@ nav {
             display: block;
         }
         @media screen and (max-width: $mobile) {
-            border: none;
+            border: none; //取消放大效果
         }
     }
     // Part II for 導覽列主要連結
@@ -101,60 +102,63 @@ nav {
             position: relative;
             text-align: center;
             list-style: none;
-        }
-        li {
-            margin: 0 7px;
-            position: relative;
-            left: 0;
-
-            .nav-a {
+            li {
+                margin: 0 7px;
                 position: relative;
-                top: 20px;
-                border-top: 3px solid transparent;
-                font-family: $font-zh;
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 100%;
-                transition: border 0.5s;
+                left: 0;
+
+                .nav-a {
+                    position: relative;
+                    top: 20px;
+                    border-top: 3px solid transparent;
+                    font-family: $font-zh;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 100%;
+                    transition: border 0.5s;
+                }
+                &:hover {
+                    .nav-a {
+                        border-top: 3px solid $color-sec;
+                    }
+                    .sub-link {
+                        //[A] 顯示&消失
+                        display: block;
+                        //[B] 縮小&放大
+                    }
+                }
             }
-            &:hover {
-                .nav-a {border-top: 3px solid $color-sec;}
-                .sub-link {
+            .sub-link {
+                background-color: $color-text;
+                position: absolute;
+                $scale-perc: 150%;
+                width: $scale-perc; //* 放大成130%
+                left: (100% - $scale-perc) / 2; //* 左邊向右移動15%
+                top: 85px;
+                box-shadow: $box-shadow;
+
+                //統一設定隱藏和顯示
+                //! 顯示的觸發：老師的方法是把膠囊拉長，但nav限制高度。
+                display: none;
+                &:hover {
                     //[A] 顯示&消失
                     display: block;
+                }
+
+                a {
+                    //[A] 顯示&消失
+                    display: block;
+                    padding: 0 15px;
+                    line-height: 3;
+                    &:hover {
+                        background-color: $color-main;
+                    }
                 }
             }
         }
         @media screen and (max-width: $tablet) {
             display: none;
         } //平板&手機共用
-
-        .sub-link {
-            background-color: $color-text;
-            position: absolute;
-            width: 130%; //* 是怎麼作到的
-            top: 85px;
-            left: -15%; //* 是怎麼作到的
-            box-shadow: $box-shadow;
-
-            //統一設定隱藏和顯示
-            //! 顯示的觸發：老師的方法是把膠囊拉長，但nav限制高度。
-            display: none;
-            &:hover {
-                //[A] 顯示&消失
-                display: block;
-            }
-
-            a {
-                //[A] 顯示&消失
-                display: block;
-                padding: 0 15px;
-                line-height: 3;
-                &:hover {
-                    background-color: $color-main;
-                }
-            }
-        }
     }
 
     // Part III for 社群連結

@@ -69,6 +69,7 @@ nav {
 @media screen and (max-width: 1024px) {
   nav {
     position: initial;
+    height: 70px;
     -ms-grid-columns: 100% 0;
         grid-template-columns: 100% 0;
   }
@@ -81,9 +82,9 @@ nav {
 }
 
 nav #menu-hbg {
-  margin: 0 10px 0 auto;
   width: 32px;
   height: 32px;
+  margin: 0 20px 0 auto;
   background-color: AliceBlue;
   border-radius: 15%;
 }
@@ -117,63 +118,55 @@ nav #menu-hbg {
     text-align: center;
     list-style: none;
   }
-}
-
-nav #nav-link-wrap li {
-  margin: 0 7px;
-  position: relative;
-  left: 0;
-}
-
-nav #nav-link-wrap li .nav-a {
-  position: relative;
-  top: 20px;
-  border-top: 3px solid transparent;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 100%;
-  -webkit-transition: border 0.5s;
-  transition: border 0.5s;
-}
-
-nav #nav-link-wrap li:hover .nav-a {
-  border-top: 3px solid AliceBlue;
-}
-
-nav #nav-link-wrap li:hover .sub-link {
-  display: block;
+  nav #nav-link-wrap li {
+    margin: 0 7px;
+    position: relative;
+    left: 0;
+  }
+  nav #nav-link-wrap li .nav-a {
+    position: relative;
+    top: 20px;
+    border-top: 3px solid transparent;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    -webkit-transition: border 0.5s;
+    transition: border 0.5s;
+  }
+  nav #nav-link-wrap li:hover .nav-a {
+    border-top: 3px solid AliceBlue;
+  }
+  nav #nav-link-wrap li:hover .sub-link {
+    display: block;
+  }
+  nav #nav-link-wrap .sub-link {
+    background-color: #103a89;
+    position: absolute;
+    width: 150%;
+    left: -25%;
+    top: 85px;
+    -webkit-box-shadow: 1px 1px 5px #666;
+            box-shadow: 1px 1px 5px #666;
+    display: none;
+  }
+  nav #nav-link-wrap .sub-link:hover {
+    display: block;
+  }
+  nav #nav-link-wrap .sub-link a {
+    display: block;
+    padding: 0 15px;
+    line-height: 3;
+  }
+  nav #nav-link-wrap .sub-link a:hover {
+    background-color: cornflowerblue;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   nav #nav-link-wrap {
     display: none;
   }
-}
-
-nav #nav-link-wrap .sub-link {
-  background-color: #103a89;
-  position: absolute;
-  width: 130%;
-  top: 85px;
-  left: -15%;
-  -webkit-box-shadow: 1px 1px 5px #666;
-          box-shadow: 1px 1px 5px #666;
-  display: none;
-}
-
-nav #nav-link-wrap .sub-link:hover {
-  display: block;
-}
-
-nav #nav-link-wrap .sub-link a {
-  display: block;
-  padding: 0 15px;
-  line-height: 3;
-}
-
-nav #nav-link-wrap .sub-link a:hover {
-  background-color: cornflowerblue;
 }
 
 @media screen and (min-width: 1025px) {
