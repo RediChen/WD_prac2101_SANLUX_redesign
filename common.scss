@@ -56,7 +56,7 @@ a {
     transition: .5s;
 
     &:hover {
-        box-shadow: 0 5px 12px rgba(#666,0.3);
+        box-shadow: 0 5px 12px rgba($color-sec,0.3);
     }
 }
 // 通用樣式區 END ================================================

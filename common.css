@@ -48,8 +48,8 @@ a:link, a:visited {
 }
 
 .logo img:hover {
-  -webkit-box-shadow: 0 5px 12px rgba(102, 102, 102, 0.3);
-          box-shadow: 0 5px 12px rgba(102, 102, 102, 0.3);
+  -webkit-box-shadow: 0 5px 12px rgba(240, 248, 255, 0.3);
+          box-shadow: 0 5px 12px rgba(240, 248, 255, 0.3);
 }
 
 nav {
