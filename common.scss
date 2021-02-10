@@ -10,6 +10,9 @@ $box-shadow: 1px 1px 5px #666;
 $desktop: 1025px; //width lower bound
 $tablet: 1024px; //width upper bound
 $mobile: 767px; //width upper bound
+@mixin for-test($color) {
+    border: 1px solid $color;
+}
 
 // 通用樣式區
 * {
@@ -52,29 +55,32 @@ a {
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
+    $h-nav : 100px ;
+
     width: 100%;
     display: grid;
     align-items: center;
     background-color: $color-main;
     @media screen and (min-width: $desktop) {
-        max-height: 100px;
-        padding: 10px 0;
+        height: $h-nav;
+        max-height: $h-nav;
         top: 0;
         position: sticky; //抵達fixed原則的指定定位才會啟動效果
-        z-index: 2;
+        z-index: 2; //以免被輪播圖遮住
         grid-template-columns: 7% auto 7%;
     }
     @media screen and (max-width: $tablet) {
         //平板&手機共用
+        max-height: none;
         position: initial;
-        height: 70px;
+        //TODO height: 70px;
         grid-template-columns: 100% 0;
     }
     @media screen and (max-width: $mobile) {
-        max-height: 60px;
+        // TODO max-height: 60px;
     }
 
-    // Part 0 for RWD
+    // Part 0 : 行動裝置漢堡包
     #menu-hbg {
         width: 32px;
         height: 32px;
@@ -94,27 +100,35 @@ nav {
             border: none; //取消放大效果
         }
     }
-    // Part II for 導覽列主要連結
+    // Part II : 導覽列主要連結
     #nav-link-wrap {
+        margin: 0 auto;
+        height: 100%;
+        list-style: none;
+        text-align: center;
+
         @media screen and (min-width: $desktop) {
             display: flex;
-            margin: 0 auto;
             position: relative;
-            text-align: center;
-            list-style: none;
             li {
+                //須確保li的高度佔滿整個nav，才能讓hover的範圍可以銜接sub-link
                 margin: 0 7px;
-                position: relative;
-                left: 0;
+                position: relative; // for .sub-link的絕對定位
+                & > a {
+                    //因為有些li內含sub-link，無法用內外距垂直置中
+                    //故使用此top&transfrom組合技，用既定的父元素高度計算位移
+                    display: block; // for transform
+                    position: relative;
+                    top: $h-nav / 2 ;
+                    transform: translateY(-50%);
+                }
 
                 .nav-a {
-                    position: relative;
-                    top: 20px;
                     border-top: 3px solid transparent;
                     font-family: $font-zh;
                     font-size: 24px;
                     font-weight: 500;
-                    line-height: 100%;
+                    line-height: 200%;
                     transition: border 0.5s;
                 }
                 &:hover {
@@ -129,12 +143,12 @@ nav {
                 }
             }
             .sub-link {
-                background-color: $color-text;
+                $scale-perc: 140%;//sub-link 置中定位使用
                 position: absolute;
-                $scale-perc: 150%;
-                width: $scale-perc; //* 放大成130%
-                left: (100% - $scale-perc) / 2; //* 左邊向右移動15%
-                top: 85px;
+                width: $scale-perc; //* 放大以避免內容換行
+                left: (100% - $scale-perc) / 2; //* 讓sub-link與上方置中
+                top: $h-nav ;
+                background-color: $color-text;
                 box-shadow: $box-shadow;
 
                 //統一設定隱藏和顯示
@@ -143,11 +157,12 @@ nav {
                 &:hover {
                     //[A] 顯示&消失
                     display: block;
+                    //[B] 伸長&縮回
                 }
 
                 a {
-                    //[A] 顯示&消失
-                    display: block;
+                    display: block;//讓hover效果可以以整片呈現
+                    height: 100%;
                     padding: 0 15px;
                     line-height: 3;
                     &:hover {
@@ -157,11 +172,11 @@ nav {
             }
         }
         @media screen and (max-width: $tablet) {
-            display: none;
+            display: initial;
         } //平板&手機共用
     }
 
-    // Part III for 社群連結
+    // Part III : 社群連結
     #nav-soc {
         @media screen and (min-width: $desktop) {
             display: initial;
