@@ -53,8 +53,12 @@ $mobile: 767px; //width upper bound
     #news-card-wrap {
         width: 90%;
         margin: 0 auto;
-
+        overflow: hidden;
+//! 這邊的調整有很大的問題：調整寬度ormax寬度都有問題，margin也會出差錯。
         .news-card {
+            // max-width: 300px;
+            margin: 10px;
+            height: 60vh;
             border: 1px solid firebrick; //TODO test
             img {
                 margin: 0 auto;

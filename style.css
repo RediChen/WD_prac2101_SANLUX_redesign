@@ -94,9 +94,12 @@
 #news #news-card-wrap {
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #news #news-card-wrap .news-card {
+  margin: 10px;
+  height: 60vh;
   border: 1px solid firebrick;
 }
 
