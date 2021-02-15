@@ -25,6 +25,7 @@ a:link, a:visited {
   font-weight: 700;
   font-size: 36px;
   color: #103a89;
+  text-shadow: 1px 1px 5px #aaa;
 }
 
 .title-medium {
