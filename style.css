@@ -7,8 +7,8 @@
   max-height: 600px;
   overflow: hidden;
   margin: 0 auto;
-  -webkit-box-shadow: 1px 1px 5px #666;
-          box-shadow: 1px 1px 5px #666;
+  -webkit-box-shadow: 0 15px 15px -15px #666;
+          box-shadow: 0 15px 15px -15px #666;
 }
 
 #news #banner #banner1 {
@@ -92,28 +92,84 @@
 }
 
 #news #news-card-wrap {
-  width: 90%;
   margin: 0 auto;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 1025px) {
+  #news #news-card-wrap {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #news #news-card-wrap {
+    width: 50%;
+  }
 }
 
 #news #news-card-wrap .news-card {
+  width: 100%;
+  min-height: calc(450px- $pd-b-card);
+  max-height: calc(450px- $pd-b-card);
   margin: 10px;
-  height: 60vh;
-  border: 1px solid firebrick;
+  padding-bottom: 1em;
+  background-color: AliceBlue;
+  -webkit-box-shadow: 0 15px 15px -15px #666;
+          box-shadow: 0 15px 15px -15px #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #news #news-card-wrap .news-card img {
   margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
 }
 
 #news #news-card-wrap .news-card p {
-  margin: 50px;
+  text-overflow: ellipsis;
 }
 
-#news #news-card-wrap .news-card button {
+#news #news-card-wrap .news-card .news-card-text {
+  margin: 1em 2em;
+}
+
+#news #news-card-wrap .news-card .news-btn {
   display: block;
-  margin: 0 auto;
+  background-color: AliceBlue;
+  text-align: center;
+  margin: 0 30%;
+  -webkit-box-shadow: 0 15px 15px -15px #666;
+          box-shadow: 0 15px 15px -15px #666;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1025px) {
+  #news #news-card-wrap .news-card .news-btn {
+    color: #103a89;
+    font-size: 1em;
+  }
+  #news #news-card-wrap .news-card .news-btn:hover {
+    background-color: #103a89;
+    color: AliceBlue;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #news #news-card-wrap .news-card .news-btn {
+    background-color: rgba(16, 58, 137, 0.7);
+    color: AliceBlue;
+    font-size: 1em;
+  }
 }
 
 #news #news-card-wrap .news-card:focus {
@@ -163,8 +219,8 @@
   margin: 0 auto;
   background-image: url(https://fakeimg.pl/300x200/696969/abcdef/);
   background-size: cover;
-  -webkit-box-shadow: 1px 1px 5px #666;
-          box-shadow: 1px 1px 5px #666;
+  -webkit-box-shadow: 0 15px 15px -15px #666;
+          box-shadow: 0 15px 15px -15px #666;
   text-align: center;
   color: blanchedalmond;
   -webkit-transition: 0.5s;

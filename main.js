@@ -17,8 +17,9 @@ $('#banner').slick(
         }]
 }) ;
 $('#news-card-wrap').slick({
-    autoplay: true,
-    autoplaySpeed: slickTime,
+    // autoplay: true,
+    // autoplaySpeed: slickTime,
+    //TODO for test
     slidesToShow: 3,
     cssEase: 'ease-in-out',
     responsive: [
