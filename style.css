@@ -259,7 +259,17 @@
   content: "IDK";
 }
 
-#market-channel {
-  text-align: center;
+#market-channel #channel-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2;
+      grid-template-columns: 2;
+  -ms-grid-rows: 2;
+      grid-template-rows: 2;
+  grid-gap: 10px;
+}
+
+#market-channel #channel-wrap .channel a {
+  color: #103a89;
 }
 /*# sourceMappingURL=style.css.map */
