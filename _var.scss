@@ -8,6 +8,7 @@ $shadow-box: 0 15px 15px -15px #666; //下方陰影
 $desktop: 1025px; //width lower bound
 $tablet: 1024px; //width upper bound
 $mobile: 767px; //width upper bound
+$h-nav: 100px;//desktop size
 
 @mixin font-zh($_fz, $_wt) {
     font-family:"Noto Sans TC", sans-serif; //400, 500, 700, 900

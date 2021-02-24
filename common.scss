@@ -46,12 +46,11 @@ a {
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
-    $h-nav: 100px;//desktop size
-
     width: 100%;
     display: grid;
     align-items: center;
     background-color: $color-main;
+
     @media screen and (min-width: $desktop) {
         height: $h-nav;
         max-height: $h-nav;
@@ -116,9 +115,7 @@ nav {
 
                 .nav-a {
                     border-top: 3px solid transparent;
-                    font-family: $font-zh;
-                    font-size: 24px;
-                    font-weight: 500;
+                    @include font-zh(24px, 500) ;
                     line-height: 200%;
                     transition: border 0.5s;
                 }
@@ -176,7 +173,7 @@ nav {
                     filter: sepia(100%) drop-shadow(0 0 1px $color-sec);
                 }
                 &:active {
-                    filter: invert(0.3);
+                    filter: invert(30%);
                 }
             }
         }
