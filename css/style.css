@@ -103,6 +103,12 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #news #news-card-wrap {
+    width: 70%;
+  }
+}
+
 @media screen and (min-width: 767px) {
   #news #news-card-wrap {
     width: 50%;
@@ -145,7 +151,6 @@
   display: block;
   background-color: AliceBlue;
   text-align: center;
-  margin: 0 25%;
   -webkit-box-shadow: 0 15px 15px -15px #666;
           box-shadow: 0 15px 15px -15px #666;
   border-radius: 10% / 50%;
@@ -156,6 +161,7 @@
 
 @media screen and (min-width: 1025px) {
   #news #news-card-wrap .news-card .news-btn {
+    margin: 0 25%;
     color: #103a89;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1em;
@@ -169,6 +175,7 @@
 
 @media screen and (max-width: 1024px) {
   #news #news-card-wrap .news-card .news-btn {
+    margin: 0 35%;
     background-color: rgba(16, 58, 137, 0.7);
     color: AliceBlue;
     font-size: 1em;

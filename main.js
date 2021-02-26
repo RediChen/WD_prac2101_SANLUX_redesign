@@ -4,8 +4,8 @@ const slickTime = 2500 ;
 
 $('#banner').slick(
 {
-    // autoplay: true,
-    // autoplaySpeed: slickTime,
+    autoplay: true,
+    autoplaySpeed: slickTime,
     cssEase: 'ease-in-out',
     // dots: true,
     responsive: [
@@ -17,8 +17,8 @@ $('#banner').slick(
         }]
 }) ;
 $('#news-card-wrap').slick({
-    // autoplay: true,
-    // autoplaySpeed: slickTime,
+    autoplay: true,
+    autoplaySpeed: slickTime,
     //TODO for test
     slidesToShow: 3,
     cssEase: 'ease-in-out',

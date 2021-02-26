@@ -46,6 +46,7 @@ a {
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
+    // ! 我想要重新寫導覽列，用flex設定RWD的彈性
     width: 100%;
     display: grid;
     align-items: center;
@@ -96,9 +97,9 @@ nav {
         height: 100%;
         list-style: none;
         text-align: center;
+        display: flex;
 
         @media screen and (min-width: $desktop) {
-            display: flex;
             position: relative;
             li {
                 //須確保li的高度佔滿整個nav，才能讓hover的範圍可以銜接sub-link
@@ -157,6 +158,8 @@ nav {
         }
         @media screen and (max-width: $tablet) {
             display: initial;
+
+
         } //平板&手機共用
     }
 
