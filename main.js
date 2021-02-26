@@ -4,8 +4,8 @@ const slickTime = 2500 ;
 
 $('#banner').slick(
 {
-    autoplay: true,
-    autoplaySpeed: slickTime,
+    // autoplay: true,
+    // autoplaySpeed: slickTime,
     cssEase: 'ease-in-out',
     // dots: true,
     responsive: [

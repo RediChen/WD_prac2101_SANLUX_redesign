@@ -15,15 +15,15 @@ a:link, a:visited {
 
 .hr-title {
   margin: 15px 20%;
-  border-color: #000;
+  border-color: black;
 }
 
 .title-big {
   margin-top: 100px;
   text-align: center;
   font-family: "Noto Sans TC", sans-serif;
-  font-weight: 700;
   font-size: 2em;
+  font-weight: 700;
   color: #103a89;
   text-shadow: 1px 1px 5px #aaa;
 }
@@ -31,12 +31,14 @@ a:link, a:visited {
 .title-medium {
   text-align: center;
   font-family: "Noto Sans TC", sans-serif;
-  font-weight: 500;
   font-size: 1.5em;
+  font-weight: 500;
 }
 
 .text-p {
   font-family: "Noto Sans TC", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
   font-weight: 400;
   font-size: 1em;
 }
@@ -161,8 +163,8 @@ nav #nav-link-wrap {
     left: -20%;
     top: 100px;
     background-color: #103a89;
-    -webkit-box-shadow: 1px 1px 5px #666;
-            box-shadow: 1px 1px 5px #666;
+    -webkit-box-shadow: 0 15px 15px -15px #666;
+            box-shadow: 0 15px 15px -15px #666;
     display: none;
   }
   nav #nav-link-wrap .sub-link a {
@@ -198,8 +200,8 @@ nav #nav-link-wrap {
             filter: sepia(100%) drop-shadow(0 0 1px AliceBlue);
   }
   nav #nav-soc a:active {
-    -webkit-filter: invert(0.3);
-            filter: invert(0.3);
+    -webkit-filter: invert(30%);
+            filter: invert(30%);
   }
 }
 
@@ -214,8 +216,8 @@ footer {
   width: 100%;
   background-color: #999999;
   padding-top: 30px;
-  -webkit-box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
-          box-shadow: 64px 0 12px 0 rgba(0, 0, 0, 0.4), 12px 0 6px 0 rgba(0, 0, 0, 0.4) inset;
+  -webkit-box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.6) inset;
+          box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.6) inset;
   text-align: center;
   overflow: hidden;
 }

@@ -12,7 +12,7 @@
 }
 
 #news #banner #banner1 {
-  background-image: url(./img/banner1.jpg);
+  background-image: url(../img/banner1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
@@ -23,7 +23,7 @@
 }
 
 #news #banner #banner2 {
-  background-image: url(./img/banner2.jpg);
+  background-image: url(../img/banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
@@ -34,7 +34,7 @@
 }
 
 #news #banner #banner3 {
-  background-image: url(./img/banner3.jpg);
+  background-image: url(../img/banner3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
@@ -45,7 +45,7 @@
 }
 
 #news #banner #banner4 {
-  background-image: url(./img/banner4.jpg);
+  background-image: url(../img/banner4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
@@ -56,7 +56,7 @@
 }
 
 #news #banner #banner5 {
-  background-image: url(./img/banner5.jpg);
+  background-image: url(../img/banner5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
@@ -67,7 +67,7 @@
 }
 
 #news #banner #banner6 {
-  background-image: url(./img/banner6.jpg);
+  background-image: url(../img/banner6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vw / 3);
@@ -145,9 +145,10 @@
   display: block;
   background-color: AliceBlue;
   text-align: center;
-  margin: 0 30%;
+  margin: 0 25%;
   -webkit-box-shadow: 0 15px 15px -15px #666;
           box-shadow: 0 15px 15px -15px #666;
+  border-radius: 10% / 50%;
   padding: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -259,10 +260,6 @@
 
 #info #info-card-wrap .info-card:hover h3 {
   font-size: 24px;
-}
-
-#info #info-card-wrap .info-card:hover::after {
-  content: "IDK";
 }
 
 #market-channel #channel-wrap {

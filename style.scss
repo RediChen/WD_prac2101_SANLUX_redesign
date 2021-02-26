@@ -14,7 +14,7 @@
         box-shadow: $shadow-box;
         @for $i from 1 through 6 {
             #banner#{$i} {
-                background-image: url(./img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
+                background-image: url(../img/banner#{$i}.jpg); //for 迴圈也可以使用在檔名的數字
                 background-size: cover;
                 background-repeat: no-repeat;
                 height: calc(100vw / 3); //用calc固定長寬比。必須撐開高度，否則其預設為h=1px。
@@ -83,8 +83,9 @@
                 display: block;
                 background-color: $color-sec;
                 text-align: center;
-                margin: 0 30%;
+                margin: 0 25%;
                 box-shadow: $shadow-box;
+                border-radius: 10% / 50%;
                 padding: 5px;
                 transition: 0.5s;
 
@@ -167,10 +168,6 @@
                 }
                 h3 {
                     font-size: 24px;
-                }
-                &::after {
-                    //TODO test
-                    content: "IDK";
                 }
             }
         }
