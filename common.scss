@@ -1,4 +1,4 @@
-@import "./var" ;
+@import "./var";
 
 // 通用樣式區
 * {
@@ -20,24 +20,24 @@ a {
     //用class統一設定格式
     margin-top: 100px;
     text-align: center;
-    @include font-zh(2em, 700) ;
-    color: $color-text ;
-    text-shadow: $shadow-text ;
+    @include font-zh(2em, 700);
+    color: $color-text;
+    text-shadow: $shadow-text;
 }
 .title-medium {
     text-align: center;
-    @include font-zh(1.5em, 500) ;
+    @include font-zh(1.5em, 500);
 }
 .text-p {
-    @include font-zh(1em, 300) ;
+    @include font-zh(1em, 300);
     font-weight: 400;
     font-size: 1em;
 }
-.logo img {
+.logo > img {
     height: auto;
     width: auto;
     border-radius: 5px;
-    transition: box-shadow .5s;
+    transition: box-shadow 0.5s;
 
     &:hover {
         box-shadow: 0 3px 10px rgba($color-sec, 0.6);
@@ -46,7 +46,6 @@ a {
 // 通用樣式區 END ================================================
 // 導覽列 ========================================================
 nav {
-    // ! 我想要重新寫導覽列，用flex設定RWD的彈性
     width: 100%;
     display: grid;
     align-items: center;
@@ -71,7 +70,7 @@ nav {
         // TODO max-height: 60px;
     }
 
-    // Part 0 : 行動裝置漢堡包
+    // Part 0-1 : 行動裝置漢堡包
     #menu-hbg {
         width: 32px;
         height: 32px;
@@ -90,6 +89,14 @@ nav {
         @media screen and (max-width: $mobile) {
             border: none; //取消放大效果
         }
+    }
+    // Part 0-2 : LOGO獨立處理
+    #nav-logo {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2; //以免被輪播圖遮住 along w/ nav
     }
     // Part II : 導覽列主要連結
     #nav-link-wrap {
@@ -116,7 +123,7 @@ nav {
 
                 .nav-a {
                     border-top: 3px solid transparent;
-                    @include font-zh(24px, 500) ;
+                    @include font-zh(24px, 500);
                     line-height: 200%;
                     transition: border 0.5s;
                 }
@@ -129,6 +136,11 @@ nav {
                         display: block;
                         //[B] 伸長&縮回
                     }
+                }
+                #nav-logo-seat {
+                    width: 138px;
+                    height: 70px;
+                    //騰出LOGO的空位
                 }
             }
             .sub-link {
@@ -158,8 +170,6 @@ nav {
         }
         @media screen and (max-width: $tablet) {
             display: initial;
-
-
         } //平板&手機共用
     }
 
@@ -191,9 +201,9 @@ footer {
     // margin: 10%;
     height: 200px; //TODO
     width: 100%;
-    background-color: #999999;
+    background-color: $color-main;
     padding-top: 30px;
-    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.6) inset;
+    box-shadow: 0 20px 20px -10px rgb(81, 118, 186) inset;
     text-align: center;
     overflow: hidden;
 }
