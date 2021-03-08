@@ -5,11 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>台灣三洋 | SANLUX</title>
     <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-    <!-- nav 預留位置 -->
+    <!-- 導覽列 ======================================================== -->
+    <nav>
+        <!--Part 0-1 : 行動裝置漢堡包-->
+        <div id="menu-hbg"><img src="../img/menu_hamburger.png" alt=""></div>
+        <!--Part 0-2 : LOGO獨立處理-->
+        <!-- 才能專心處裡RWD中會變化的元件 -->
+        <a href="#" class="logo" id="nav-logo" title="返回首頁"><img src="../img/LOGO_temp.png" alt="台灣三洋 官方網站"></a>
+        <!--Part I : 排版對稱的襯墊-->
+        <div></div>
+        <!--Part II : 導覽列主要連結-->
+        <ul id="nav-link-wrap">
+            <li><a class="nav-a" href="#news">最新消息</a></li>
+            <li><a class="nav-a" href="#info">商品情報</a></li>
+            <li><a class="nav-a" href="#market-channel">銷售通路</a></li>
+            <li><div id="nav-logo-seat"></div></li><!-- 騰出LOGO的空缺 -->
+            <li>
+                <a class="nav-a" href="./04_service">售後服務</a>
+                <div class="sub-link">
+                    <a href="">服務據點</a>
+                    <a href="">報修服務</a>
+                    <a href="">保證書登錄</a>
+                    <a href="">常見問題</a>
+                    <a href="">家電小百科</a>
+                </div>
+            </li>
+            <li>
+                <a class="nav-a" href="./05_invest">投資專區</a>
+                <div class="sub-link">
+                    <a href="">公司資訊</a>
+                    <a href="">最新訊息</a>
+                    <a href="">股東專欄</a>
+                    <a href="">股價資訊</a>
+                    <a href="">財務資訊</a>
+                    <a href="">利害關係人專區</a>
+                </div>
+            </li>
+            <li>
+                <a class="nav-a" href="./06_DLC">下載專區</a>
+                <div class="sub-link">
+                    <a href="">產品說明書</a>
+                    <a href="">驅動程式下載</a>
+                    <a href="">其他下載</a>
+                </div>
+            </li>
+        </ul>
+        <!--Part III for 社群連結-->
+        <div id="nav-soc">
+            <a href="https://www.facebook.com/sanyotaiwan">
+                <img src="../img/icon_FB.png" alt="台灣三洋 粉絲專頁">
+            </a>
+        </div>
+        <!-- RoHs認證 內移至商品情報 -->
+    </nav>
+    <!-- 導覽列 END ==================================================== -->
+    
 
     <!-- 這裡要紀錄歷史的所有公告 -->
+
+    <!-- 頁尾 =============================================================== -->
+    <footer>
+        <div>
+            <a href="#" class="logo" title="返回首頁">
+                <img src="./img/LOGO_temp.png" alt="台灣三洋 官方網站">
+            </a>
+        </div>
+        <p class="text-p">Copyright &copy; 2014 Taiwan Sanyo</p>
+        <!-- 原網站有提供詳細的聲明段落，想要用點擊秀出 -->
+    </footer>
+    <!-- 頁尾 END =========================================================== -->
 </body>
 </html>
